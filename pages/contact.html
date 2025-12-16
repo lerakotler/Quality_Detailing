@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Контакты - Quality Detailing</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ваш_ключ_яндекс_карт&lang=ru_RU" type="text/javascript"></script>
+
+</head>
+<body>
+    <!-- Шапка -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-placeholder">
+                    <img src="../img/logo.png" alt="Quality Detailing">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильная шапка -->
+    <div class="mobile-header">
+        <div class="container">
+            <div class="mobile-top-bar">
+                <div class="mobile-left">
+                    <div class="mobile-logo">
+                        <div class="logo-placeholder">
+                            <img src="../img/logo.png" alt="Quality Detailing">
+                        </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a href="#callback-form" class="mobile-callback">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <div class="burger-menu" id="burgerMenu">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильное меню -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="../detailing.html">Главная</a></li>
+            <li><a href="../pages/uslugi.html">Услуги</a></li>
+            <li><a href="../pages/online.html">Онлайн-запись</a></li>
+            <li><a href="../pages/portfolio.html">Портфолио</a></li>
+            <li><a href="../pages/blog.html">Блог</a></li>
+            <li><a href="../pages/about.html">О нас</a></li>
+            <li><a href="../pages/contact.html" class="active">Контакты</a></li>
+        </ul>
+    </div>
+    
+    <!-- Верхнее меню -->
+    <div class="top-menu">
+        <div class="container">
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <li><a href="../detailing.html">Главная</a></li>
+                    <li><a href="../pages/uslugi.html">Услуги</a></li>
+                    <li><a href="../pages/online.html">Онлайн-запись</a></li>
+                    <li><a href="../pages/portfolio.html">Портфолио</a></li>
+                    <li><a href="../pages/blog.html">Блог</a></li>
+                    <li><a href="../pages/about.html">О нас</a></li>
+                    <li><a href="../pages/contact.html" class="active">Контакты</a></li>
+                </ul>
+                <a href="#callback-form" class="callback-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menu-divider"></div>
+
+    <!-- Герой баннер -->
+    <section class="contacts-hero">
+        <div class="container">
+            <div class="contacts-hero-content">
+                <h1 class="contacts-hero-title">Контакты</h1>
+                <p class="contacts-hero-subtitle">Свяжитесь с нами удобным для вас способом</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция контактов -->
+    <section class="contacts-section">
+        <div class="container">
+            <!-- БЕЛАЯ НАДПИСЬ "НАШИ КОНТАКТЫ" -->
+            <h2 class="contacts-title">Наши контакты</h2>
+            <div class="contacts-container">
+                <!-- Карточки контактов -->
+                <div class="contacts-grid">
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <h3 class="contact-title">Адрес</h3>
+                        <p class="contact-info">
+                            г. Москва, Кронштадтский бульвар, д. 37Б
+                        </p>
+                        <a href="#map" class="contact-link">Посмотреть на карте →</a>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="contact-title">Телефоны</h3>
+                        <p class="contact-info">
+                            <strong>Основной:</strong><br>
+                            <a href="tel:+74951234567" class="contact-link">+7 (977) 830-36-70</a>
+                        </p>
+                        <p class="contact-info">
+                            <strong>Мобильный:</strong><br>
+                            <a href="tel:+79161234567" class="contact-link">+7 (977) 928-08-59</a>
+                        </p>
+                    </div>
+                    
+                    <div class="contact-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="contact-title">Электронная почта</h3>
+                        <p class="contact-info">
+                            <strong>Для записей:</strong><br>
+                            <a href="mailto:booking@qualitydetailing.ru" class="contact-link">booking@qualitydetailing.ru</a>
+                        </p>
+                        <p class="contact-info">
+                            <strong>Для вопросов:</strong><br>
+                            <a href="mailto:info@qualitydetailing.ru" class="contact-link">info@qualitydetailing.ru</a>
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Часы работы -->
+                <h2 class="section-title">Часы работы</h2>
+                <div class="hours-grid">
+                    <div class="day-block">
+                        <div class="day-name">Понедельник</div>
+                        <div class="day-hours">9:00 - 20:00</div>
+                    </div>
+                    <div class="day-block">
+                        <div class="day-name">Вторник</div>
+                        <div class="day-hours">9:00 - 20:00</div>
+                    </div>
+                    <div class="day-block">
+                        <div class="day-name">Среда</div>
+                        <div class="day-hours">9:00 - 20:00</div>
+                    </div>
+                    <div class="day-block">
+                        <div class="day-name">Четверг</div>
+                        <div class="day-hours">9:00 - 20:00</div>
+                    </div>
+                    <div class="day-block">
+                        <div class="day-name">Пятница</div>
+                        <div class="day-hours">9:00 - 20:00</div>
+                    </div>
+                    <div class="day-block">
+                        <div class="day-name">Суббота</div>
+                        <div class="day-hours">10:00 - 18:00</div>
+                    </div>
+                    <div class="day-block">
+                        <div class="day-name">Воскресенье</div>
+                        <div class="day-hours closed">Выходной</div>
+                    </div>
+                </div>
+                
+                <!-- Карта с отмеченной точкой -->
+                <h2 class="section-title" id="map">Мы на карте</h2>
+                <div class="map-container">
+                    <iframe 
+                        id="yandex-map" 
+                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0777df5a3c339229eb3e095b8af62908d1d23ce447795ff31f980125ce258957&amp;source=constructor&amp;scroll=false&amp;lang=ru_RU&amp;mode=search&amp;text=Кронштадтский+бульвар%2C+д.+37Б%2C+Москва"
+                        frameborder="0"
+                        allowfullscreen="true">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратного звонка -->
+    <section class="callback-form-section" id="callback-form">
+        <div class="container">
+            <div class="callback-form-container">
+                <h2 class="form-title">Заказать обратный звонок</h2>
+                <form class="callback-form" id="callbackForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" id="callbackName" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Ваш телефон" id="callbackPhone" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- РАЗДЕЛИТЕЛЬ ПЕРЕД ФУТЕРОМ -->
+    <div class="footer-divider-top"></div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <div class="footer-row">
+                    <a href="../detailing.html">Главная</a>
+                    <a href="../pages/uslugi.html">Услуги</a>
+                    <a href="../pages/online.html">Онлайн-запись</a>
+                    <a href="../pages/portfolio.html">Портфолио</a>
+                </div>
+                <div class="footer-row">
+                    <a href="../pages/about.html">О нас</a>
+                    <a href="../pages/blog.html">Блог</a>
+                    <a href="../pages/contact.html">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                <div class="social-icon"><i class="fab fa-vk"></i></div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">Quality Detailing</div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно подтверждения -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="confirmation-content">
+            <div class="confirmation-icon"><i class="fas fa-phone"></i></div>
+            <h2 class="confirmation-title">Спасибо за заявку!</h2>
+            <p class="confirmation-text">Мы получили вашу заявку на обратный звонок. Наш менеджер свяжется с вами в течение часа.</p>
+            <button class="confirmation-button" id="closeConfirmationModal">Понятно</button>
+        </div>
+    </div>
+
+    <!-- Стрелка наверх -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        ↑
+    </button>
+
+    <script src="../js/contact.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Блог - Quality Detailing</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/blog.css">
+
+</head>
+<body>
+    <!-- Шапка -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-placeholder">
+                    <img src="../img/logo.png" alt="Quality Detailing">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильная шапка -->
+    <div class="mobile-header">
+        <div class="container">
+            <div class="mobile-top-bar">
+                <div class="mobile-left">
+                    <div class="mobile-logo">
+                        <div class="logo-placeholder">
+                            <img src="../img/logo.png" alt="Quality Detailing">
+                        </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a href="#callback" class="mobile-callback">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <div class="burger-menu" id="burgerMenu">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильное меню -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="../detailing.html">Главная</a></li>
+            <li><a href="../pages/uslugi.html">Услуги</a></li>
+            <li><a href="../pages/online.html">Онлайн-запись</a></li>
+            <li><a href="../pages/portfolio.html">Портфолио</a></li>
+            <li><a href="../pages/blog.html" class="active">Блог</a></li>
+            <li><a href="../pages/about.html">О нас</a></li>
+            <li><a href="../pages/contact.html">Контакты</a></li>
+        </ul>
+    </div>
+    
+    <!-- Верхнее меню -->
+    <div class="top-menu">
+        <div class="container">
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <li><a href="../detailing.html">Главная</a></li>
+                    <li><a href="../pages/uslugi.html">Услуги</a></li>
+                    <li><a href="../pages/online.html">Онлайн-запись</a></li>
+                    <li><a href="../pages/portfolio.html">Портфолио</a></li>
+                    <li><a href="../pages/blog.html" class="active">Блог</a></li>
+                    <li><a href="../pages/about.html">О нас</a></li>
+                    <li><a href="../pages/contact.html">Контакты</a></li>
+                </ul>
+                <a href="#callback" class="callback-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menu-divider"></div>
+
+    <!-- Герой баннер -->
+    <section class="blog-hero">
+        <div class="container">
+            <div class="blog-hero-content">
+                <h1 class="blog-hero-title">Блог</h1>
+                <p class="blog-hero-subtitle">Полезные статьи и советы по уходу за автомобилем</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Секция блога -->
+    <section class="blog-section">
+        <div class="container">
+            <h2 class="section-title">Последние статьи</h2>
+            <div class="blog-container">
+                <div class="blog-list" id="blogList">
+                    <!-- Статьи будут загружаться здесь -->
+                </div>
+                
+                <!-- Пагинация -->
+                <div class="pagination" id="pagination">
+                    <!-- Пагинация будет генерироваться скриптом -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма обратного звонка -->
+    <section class="callback-form-section" id="callback">
+        <div class="container">
+            <div class="callback-form-container">
+                <h2 class="form-title">Заказать обратный звонок</h2>
+                <form class="callback-form" id="callbackForm">
+                    <div class="form-group">
+                        <input type="text" placeholder="Ваше имя" id="callbackName" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" placeholder="Ваш телефон" id="callbackPhone" required>
+                    </div>
+                    <button type="submit" class="submit-btn">Отправить</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- ДОБАВЛЕН РАЗДЕЛИТЕЛЬ ПЕРЕД ФУТЕРОМ -->
+    <div class="footer-divider-top"></div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <div class="footer-row">
+                    <a href="../detailing.html">Главная</a>
+                    <a href="../pages/uslugi.html">Услуги</a>
+                    <a href="../pages/online.html">Онлайн-запись</a>
+                    <a href="../pages/portfolio.html">Портфолио</a>
+                </div>
+                <div class="footer-row">
+                    <a href="../pages/about.html">О нас</a>
+                    <a href="../pages/blog.html">Блог</a>
+                    <a href="../pages/contact.html">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                <div class="social-icon"><i class="fab fa-vk"></i></div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">Quality Detailing</div>
+        </div>
+    </footer>
+
+    <!-- Модальное окно подтверждения -->
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="confirmation-content">
+            <div class="confirmation-icon"><i class="fas fa-phone"></i></div>
+            <h2 class="confirmation-title">Спасибо за заявку!</h2>
+            <p class="confirmation-text">Мы получили вашу заявку на обратный звонок. Наш менеджер свяжется с вами в течение часа.</p>
+            <button class="confirmation-button" id="closeConfirmationModal">Понятно</button>
+        </div>
+    </div>
+
+    <!-- Стрелка наверх -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        ↑
+    </button>
+
+    <script src="../js/blog.js"></script>
+
+</body>
+</html>

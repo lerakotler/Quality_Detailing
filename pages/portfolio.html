@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Портфолио - Quality Detailing</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/portfolio.css">
+</head>
+<body>
+    <!-- Шапка с логотипом для десктопа -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-placeholder">
+                    <img src="../img/logo.png" alt="Quality Detailing">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильная шапка -->
+    <div class="mobile-header">
+        <div class="container">
+            <div class="mobile-top-bar">
+                <div class="mobile-left">
+                    <div class="mobile-logo">
+                        <div class="logo-placeholder">
+                            <img src="../img/logo.png" alt="Quality Detailing">
+                        </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a href="../detailing.html#callback" class="mobile-callback">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <div class="burger-menu" id="burgerMenu">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Оверлей для мобильного меню -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    
+    <!-- Мобильное меню -->
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="../detailing.html">Главная</a></li>
+            <li><a href="../pages/uslugi.html">Услуги</a></li>
+            <li><a href="../pages/online.html">Онлайн-запись</a></li>
+            <li><a href="../pages/portfolio.html" class="active">Портфолио</a></li>
+            <li><a href="../pages/blog.html">Блог</a></li>
+            <li><a href="../pages/about.html">О нас</a></li>
+            <li><a href="../pages/contact.html">Контакты</a></li>
+        </ul>
+    </div>
+    
+    <!-- Верхняя панель с меню для десктопа -->
+    <div class="top-menu">
+        <div class="container">
+            <div class="menu-container">
+                
+                <ul class="menu-items">
+                    <li><a href="../detailing.html">Главная</a></li>
+                    <li><a href="../pages/uslugi.html">Услуги</a></li>
+                    <li><a href="../pages/online.html">Онлайн-запись</a></li>
+                    <li><a href="../pages/portfolio.html" class="active">Портфолио</a></li>
+                    <li><a href="../pages/blog.html">Блог</a></li>
+                    <li><a href="../pages/about.html">О нас</a></li>
+                    <li><a href="../pages/contact.html">Контакты</a></li>
+                </ul>
+                
+                <a href="../detailing.html#callback" class="callback-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Разделитель после меню -->
+    <div class="menu-divider"></div>
+
+    <!-- Герой баннер для портфолио -->
+    <section class="portfolio-hero">
+        <div class="container">
+            <div class="portfolio-hero-content">
+                <h1 class="portfolio-hero-title">Наши работы</h1>
+                <p class="portfolio-hero-subtitle">Лучшие примеры детейлинга автомобилей</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Категории портфолио -->
+    <section class="portfolio-categories">
+        <div class="container">
+            <h2 class="section-title">Категории работ</h2>
+            <div class="categories-grid">
+                <div class="category-card" onclick="scrollToSection('exterior')">
+                    <div class="category-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3 class="category-title">Экстерьер</h3>
+                    <p class="category-description">Примеры работ по полировке и восстановлению кузова</p>
+                    <a href="#exterior" class="category-link">
+                        Смотреть работы <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('interior')">
+                    <div class="category-icon">
+                        <i class="fas fa-chair"></i>
+                    </div>
+                    <h3 class="category-title">Интерьер</h3>
+                    <p class="category-description">Химчистка и восстановление салонов автомобилей</p>
+                    <a href="#interior" class="category-link">
+                        Смотреть работы <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('ceramic')">
+                    <div class="category-icon">
+                        <i class="fas fa-shield-alt"></i>
+                    </div>
+                    <h3 class="category-title">Керамика</h3>
+                    <p class="category-description">Нанесение защитных керамических покрытий</p>
+                    <a href="#ceramic" class="category-link">
+                        Смотреть работы <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('full')">
+                    <div class="category-icon">
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <h3 class="category-title">Полный детейлинг</h3>
+                    <p class="category-description">Комплексные работы по полному детейлингу</p>
+                    <a href="#full" class="category-link">
+                        Смотреть работы <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+
+                <div class="category-card" onclick="scrollToSection('glass')">
+                    <div class="category-icon">
+                        <i class="fas fa-tint"></i>
+                    </div>
+                    <h3 class="category-title">Стекла и оптика</h3>
+                    <p class="category-description">Восстановление фар и гидрофобное покрытие стекол</p>
+                    <a href="#glass" class="category-link">
+                        Смотреть работы <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <div class="category-card" onclick="scrollToSection('premium')">
+                    <div class="category-icon">
+                        <i class="fas fa-crown"></i>
+                    </div>
+                    <h3 class="category-title">Премиум класс</h3>
+                    <p class="category-description">Работы на автомобилях премиум и люкс класса</p>
+                    <a href="#premium" class="category-link">
+                        Смотреть работы <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Кнопка записи онлайн -->
+    <section class="booking-button-section">
+        <div class="container">
+            <a href="../pages/online.html" class="booking-button">
+                <i class="fas fa-calendar-check"></i>
+                Записаться онлайн
+            </a>
+        </div>
+    </section>
+
+    <!-- Галерея работ -->
+    <section class="portfolio-gallery">
+        <div class="container">
+            <!-- Экстерьер -->
+            <div class="portfolio-section" id="exterior">
+                <h2 class="portfolio-title">Работы по экстерьеру</h2>
+                
+                <div class="category-info">
+                    <h3>Полировка и восстановление кузова</h3>
+                    <p>Профессиональная полировка кузова, удаление царапин и сколов, восстановление лакокрасочного покрытия. Мы используем только профессиональное оборудование и материалы премиум-класса.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/port1.webp" alt="Полировка BMW" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">BMW X5</div>
+                            <div class="gallery-service">Полная полировка кузова</div>
+                            <div class="gallery-date">Март 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port2.webp" alt="Полировка Mercedes" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Mercedes-Benz S-Class</div>
+                            <div class="gallery-service">Восстановление ЛКП</div>
+                            <div class="gallery-date">Февраль 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port3.webp" alt="Полировка Audi" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Audi Q7</div>
+                            <div class="gallery-service">Детейлинг полировка</div>
+                            <div class="gallery-date">Январь 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Интерьер -->
+            <div class="portfolio-section" id="interior">
+                <h2 class="portfolio-title">Работы по интерьеру</h2>
+                
+                <div class="category-info">
+                    <h3>Химчистка и восстановление салона</h3>
+                    <p>Глубокая химчистка всех элементов салона, восстановление кожи и текстиля, озонирование и антибактериальная обработка. Вернем вашему салону идеальный вид.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/port4.webp" alt="Химчистка салона" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Range Rover Sport</div>
+                            <div class="gallery-service">Химчистка кожи и текстиля</div>
+                            <div class="gallery-date">Декабрь 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port5.webp" alt="Восстановление кожи" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Porsche Cayenne</div>
+                            <div class="gallery-service">Восстановление кожи</div>
+                            <div class="gallery-date">Ноябрь 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port6.webp" alt="Чистка потолка" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Lexus RX</div>
+                            <div class="gallery-service">Комплексная химчистка</div>
+                            <div class="gallery-date">Октябрь 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Керамика -->
+            <div class="portfolio-section" id="ceramic">
+                <h2 class="portfolio-title">Керамические покрытия</h2>
+                
+                <div class="category-info">
+                    <h3>Нанесение защитных покрытий</h3>
+                    <p>Профессиональное нанесение керамических покрытий сроком от 1 до 5 лет. Защита от сколов, царапин, химических воздействий и ультрафиолета.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/port7.webp" alt="Керамика Porsche" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Porsche 911</div>
+                            <div class="gallery-service">Керамическое покрытие 2 года</div>
+                            <div class="gallery-date">Март 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port8.webp" alt="Керамика Tesla" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Tesla Model S</div>
+                            <div class="gallery-service">Нано-керамика 3 года</div>
+                            <div class="gallery-date">Февраль 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port9.webp" alt="Керамика Mercedes" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Mercedes G-Class</div>
+                            <div class="gallery-service">Керамика премиум 5 лет</div>
+                            <div class="gallery-date">Январь 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Полный детейлинг -->
+            <div class="portfolio-section" id="full">
+                <h2 class="portfolio-title">Полный детейлинг</h2>
+                
+                <div class="category-info">
+                    <h3>Комплексные работы по детейлингу</h3>
+                    <p>Полный цикл работ от подготовки кузова до финишной защиты. Включает полировку, химчистку, нанесение защитных покрытий и многое другое.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/port10.webp" alt="Полный детейлинг" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">BMW M5</div>
+                            <div class="gallery-service">Полный детейлинг комплекс</div>
+                            <div class="gallery-date">Декабрь 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port11.webp" alt="Комплексные работы" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Audi A8</div>
+                            <div class="gallery-service">Экспресс-детейлинг</div>
+                            <div class="gallery-date">Ноябрь 2023</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port12.webp" alt="Комплекс" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Volvo XC90</div>
+                            <div class="gallery-service">Полный цикл работ</div>
+                            <div class="gallery-date">Октябрь 2023</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Стекла и оптика -->
+            <div class="portfolio-section" id="glass">
+                <h2 class="portfolio-title">Стекла и оптика</h2>
+                
+                <div class="category-info">
+                    <h3>Работы по стеклам и оптике</h3>
+                    <p>Восстановление и полировка стекол, гидрофобное покрытие, восстановление фар и фонарей. Обеспечиваем идеальную видимость и защиту.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/port13.webp" alt="Восстановление фар" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Subaru Forester</div>
+                            <div class="gallery-service">Восстановление фар</div>
+                            <div class="gallery-date">Март 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port14.webp" alt="Гидрофобное покрытие" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Toyota Camry</div>
+                            <div class="gallery-service">Гидрофобное покрытие стекол</div>
+                            <div class="gallery-date">Февраль 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port15.webp" alt="Полировка стекол" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">BMW M4</div>
+                            <div class="gallery-service">Полировка лобового стекла</div>
+                            <div class="gallery-date">Январь 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Премиум класс -->
+            <div class="portfolio-section" id="premium">
+                <h2 class="portfolio-title">Премиум класс</h2>
+                
+                <div class="category-info">
+                    <h3>Работы на автомобилях премиум-класса</h3>
+                    <p>Эксклюзивные услуги для автомобилей премиум и люкс класса. Используем только материалы премиум-сегмента и индивидуальный подход к каждому клиенту.</p>
+                </div>
+                
+                <div class="gallery-grid">
+                    <div class="gallery-item">
+                        <img src="../img/port16.webp" alt="Rolls Royce" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Rolls Royce Phantom</div>
+                            <div class="gallery-service">Эксклюзивный детейлинг</div>
+                            <div class="gallery-date">Март 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port17.webp" alt="Bentley" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Bentley Continental GT</div>
+                            <div class="gallery-service">Премиум керамика</div>
+                            <div class="gallery-date">Февраль 2024</div>
+                        </div>
+                    </div>
+                    
+                    <div class="gallery-item">
+                        <img src="../img/port18.webp" alt="Lamborghini" class="gallery-image">
+                        <div class="gallery-info">
+                            <div class="gallery-car">Lamborghini Huracan</div>
+                            <div class="gallery-service">Спортивный детейлинг</div>
+                            <div class="gallery-date">Январь 2024</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Статистика -->
+    <section class="portfolio-stats">
+        <div class="container">
+            <h2 class="section-title" style="color: #000000;">Наша статистика</h2>
+            <div class="stats-grid">
+                <div class="stat-item">
+                    <div class="stat-number">500+</div>
+                    <div class="stat-label">Выполненных работ</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">98%</div>
+                    <div class="stat-label">Довольных клиентов</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5 лет</div>
+                    <div class="stat-label">Опыта работы</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Брендов авто</div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <div class="form-divider"></div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <div class="footer-row">
+                    <a href="../detailing.html">Главная</a>
+                    <a href="../pages/uslugi.html">Услуги</a>
+                    <a href="../pages/online.html">Онлайн-запись</a>
+                    <a href="../pages/portfolio.html">Портфолио</a>
+                </div>
+                <div class="footer-row">
+                    <a href="../pages/about.html">О нас</a>
+                    <a href="../pages/blog.html">Блог</a>
+                    <a href="../pages/contact.html">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <div class="social-icon">
+                    <i class="fab fa-telegram"></i>
+                </div>
+                <div class="social-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <div class="social-icon">
+                    <i class="fab fa-vk"></i>
+                </div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">
+                Quality Detailing
+            </div>
+        </div>
+    </footer>
+
+    <!-- Стрелка наверх -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        ↑
+    </button>
+
+    <script src="../js/portfolio.js"></script>
+
+</body>
+</html>

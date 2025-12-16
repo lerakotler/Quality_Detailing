@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Онлайн-запись - Quality Detailing</title>
+    
+    <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="../css/online.css">
+</head>
+<body>
+    <!-- Шапка -->
+    <div class="header">
+        <div class="container">
+            <div class="header-content">
+                <div class="logo-placeholder">
+                    <img src="../img/logo.png" alt="Quality Detailing">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильная шапка -->
+    <div class="mobile-header">
+        <div class="container">
+            <div class="mobile-top-bar">
+                <div class="mobile-left">
+                    <div class="mobile-logo">
+                        <div class="logo-placeholder">
+                            <img src="../img/logo.png" alt="Quality Detailing">
+                        </div>
+                    </div>
+                    <div class="mobile-actions">
+                        <a href="../detailing.html#callback" class="mobile-callback">
+                            <i class="fas fa-phone"></i>
+                        </a>
+                        <div class="burger-menu" id="burgerMenu">
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                            <div class="burger-line"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Мобильное меню -->
+    <div class="mobile-menu-overlay" id="mobileMenuOverlay"></div>
+    <div class="mobile-menu" id="mobileMenu">
+        <div class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+        </div>
+        <ul class="mobile-menu-items">
+            <li><a href="../detailing.html">Главная</a></li>
+            <li><a href="../pages/uslugi.html">Услуги</a></li>
+            <li><a href="../pages/online.html" class="active">Онлайн-запись</a></li>
+            <li><a href="../pages/portfolio.html">Портфолио</a></li>
+            <li><a href="../pages/blog.html">Блог</a></li>
+            <li><a href="../pages/about.html">О нас</a></li>
+            <li><a href="../pages/contact.html">Контакты</a></li>
+        </ul>
+    </div>
+    
+    <!-- Верхнее меню -->
+    <div class="top-menu">
+        <div class="container">
+            <div class="menu-container">
+                <ul class="menu-items">
+                    <li><a href="../detailing.html">Главная</a></li>
+                    <li><a href="../pages/uslugi.html">Услуги</a></li>
+                    <li><a href="../pages/online.html" class="active">Онлайн-запись</a></li>
+                    <li><a href="../pages/portfolio.html">Портфолио</a></li>
+                    <li><a href="../pages/blog.html">Блог</a></li>
+                    <li><a href="../pages/about.html">О нас</a></li>
+                    <li><a href="../pages/contact.html">Контакты</a></li>
+                </ul>
+                <a href="../detailing.html#callback" class="callback-icon">
+                    <i class="fas fa-phone"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="menu-divider"></div>
+
+    <!-- Герой баннер -->
+    <section class="booking-hero">
+        <div class="container">
+            <div class="booking-hero-content">
+                <h1 class="booking-hero-title">Онлайн-запись</h1>
+                <p class="booking-hero-subtitle">Запишитесь на услугу в удобное для вас время</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Форма записи -->
+    <section class="booking-form-section">
+        <div class="container">
+            <h2 class="section-title">Запись на услугу</h2>
+            <div class="booking-container">
+                <form class="booking-form" id="bookingForm" novalidate>
+                    <div class="form-grid">
+                        <div class="form-column">
+                            <div class="form-group required">
+                                <label for="clientName">Ваше имя</label>
+                                <input type="text" id="clientName" name="clientName" required placeholder="Введите ваше имя">
+                                <div class="error-message" id="nameError">Пожалуйста, введите ваше имя</div>
+                            </div>
+                            
+                            <div class="form-group required">
+                                <label for="clientPhone">Телефон</label>
+                                <input type="tel" id="clientPhone" name="clientPhone" required placeholder="+7 (XXX) XXX-XX-XX">
+                                <div class="error-message" id="phoneError">Пожалуйста, введите корректный номер телефона</div>
+                            </div>
+                            
+                            <div class="form-group required">
+                                <label for="clientEmail">Email</label>
+                                <input type="email" id="clientEmail" name="clientEmail" required placeholder="your@email.com">
+                                <div class="error-message" id="emailError">Пожалуйста, введите корректный email</div>
+                            </div>
+                            
+                            <div class="form-group required">
+                                <label for="carModel">Марка и модель автомобиля</label>
+                                <input type="text" id="carModel" name="carModel" required placeholder="Например: BMW X5">
+                                <div class="error-message" id="carModelError">Пожалуйста, укажите марку и модель автомобиля</div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="carYear">Год выпуска</label>
+                                <input type="number" id="carYear" name="carYear" placeholder="2025" min="1990" max="2025" value="2025">
+                            </div>
+                        </div>
+                        
+                        <div class="form-column">
+                            <div class="form-group">
+                                <label for="additionalInfo">Дополнительная информация</label>
+                                <textarea id="additionalInfo" name="additionalInfo" placeholder="Особые пожелания или комментарии..."></textarea>
+                            </div>
+                            
+                            <div class="services-selection">
+                                <div class="time-note">
+                                    * Время оказания услуг будет согласовано отдельно после заполнения формы
+                                </div>
+                                
+                                <div class="selected-services" id="selectedServices">
+                                    <div class="selected-services-title">Выбранные услуги</div>
+                                    <div id="selectedServicesList">
+                                        <div class="time-note" style="text-align: left; background: transparent; border-left: none;">
+                                            Услуги не выбраны
+                                        </div>
+                                    </div>
+                                    <div class="total-price" id="totalPrice" style="display: none;">
+                                        <span>Общая стоимость:</span>
+                                        <span id="totalAmount">0 ₽</span>
+                                    </div>
+                                    <div class="services-error" id="servicesError">
+                                        Пожалуйста, выберите хотя бы одну услугу
+                                    </div>
+                                </div>
+
+                                <div id="servicesCategories"></div>
+                                
+                                <div class="form-group">
+                                    <button type="button" class="add-category-btn" id="addCategoryBtn">
+                                        <i class="fas fa-plus"></i> Добавить еще услуги
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="privacy-policy">
+                        <input type="checkbox" id="privacyAgreement" name="privacyAgreement" required>
+                        <label for="privacyAgreement">
+                            Я соглашаюсь с 
+                            <span class="privacy-link" id="privacyLink">политикой конфиденциальности</span>
+                            и обработкой персональных данных
+                        </label>
+                        <div class="error-message" id="privacyError">Необходимо согласие с политикой конфиденциальности</div>
+                    </div>
+                    
+                    <button type="submit" class="submit-btn" id="submitBtn">Отправить заявку на запись</button>
+                    <div class="success-message" id="successMessage">
+                        Заявка успешно отправлена! Мы свяжемся с вами в ближайшее время.
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <div class="form-divider"></div>
+
+    <!-- Подвал -->
+    <footer>
+        <div class="container">
+            <div class="footer-menu">
+                <div class="footer-row">
+                    <a href="../detailing.html">Главная</a>
+                    <a href="../pages/uslugi.html">Услуги</a>
+                    <a href="../pages/online.html">Онлайн-запись</a>
+                    <a href="../pages/portfolio.html">Портфолио</a>
+                </div>
+                <div class="footer-row">
+                    <a href="../pages/about.html">О нас</a>
+                    <a href="../pages/blog.html">Блог</a>
+                    <a href="../pages/contact.html">Контакты</a>
+                </div>
+            </div>
+            
+            <div class="social-links">
+                <div class="social-icon"><i class="fab fa-telegram"></i></div>
+                <div class="social-icon"><i class="fas fa-envelope"></i></div>
+                <div class="social-icon"><i class="fab fa-vk"></i></div>
+            </div>
+            
+            <div class="footer-divider"></div>
+            
+            <div class="footer-bottom">Quality Detailing</div>
+        </div>
+    </footer>
+
+    <!-- Модальные окна -->
+    <div class="modal-overlay" id="privacyModal">
+        <div class="modal-content">
+            <button class="modal-close" id="closePrivacyModal"><i class="fas fa-times"></i></button>
+            <h2 class="modal-title">Политика конфиденциальности</h2>
+<div class="modal-text">
+    <p><strong>ПОЛИТИКА КОНФИДЕНЦИАЛЬНОСТИ</strong></p>
+    
+    <p><strong>Общие положения</strong></p>
+    <p>Настоящая политика конфиденциальности разработана в соответствии с Федеральным законом от 27.07.2006 № 152-ФЗ «О персональных данных» и определяет порядок обработки персональных данных и меры по обеспечению их безопасности в компании «Quality Detailing» (далее — «Оператор»). Оператор стремится защищать конфиденциальность персональных данных субъектов и соблюдать законодательство Российской Федерации в области персональных данных.</p>
+    
+    <p><strong>Основные понятия</strong></p>
+    <p>Под персональными данными понимается любая информация, относящаяся к прямо или косвенно определенному или определяемому физическому лицу (субъекту персональных данных). Обработка персональных данных означает любое действие (операция) или совокупность действий (операций), совершаемых с использованием средств автоматизации или без использования таких средств с персональными данными. Субъект персональных данных — это клиент, посетитель сайта или иное лицо, чьи персональные данные обрабатываются Оператором.</p>
+    
+    <p><strong>Перечень обрабатываемых персональных данных</strong></p>
+    <p>Оператор обрабатывает следующие персональные данные: фамилия, имя; контактный телефон; адрес электронной почты; данные о транспортном средстве (марка, модель, год выпуска); история оказанных услуг; данные для записи на услуги (предпочтительное время, выбранные услуги); технические данные (IP-адрес, информация из cookie-файлов, данные о браузере и устройстве). Мы собираем только те данные, которые необходимы для оказания услуг и улучшения качества обслуживания.</p>
+    
+    <p><strong>Цели обработки персональных данных</strong></p>
+    <p>Обработка персональных данных осуществляется в следующих целях: предоставление услуг детейлинга и автосервиса; обработка заявок и записей на услуги; информирование клиентов о статусе заказа и выполненных работах; отправка уведомлений о готовности автомобиля; проведение маркетинговых акций и рассылка рекламных материалов (с согласия клиента); улучшение качества обслуживания и работы сайта; соблюдение требований законодательства Российской Федерации. Все цели обработки соответствуют уставным задачам Оператора.</p>
+    
+    <p><strong>Правовые основания обработки персональных данных</strong></p>
+    <p>Обработка персональных данных осуществляется на следующих правовых основаниях: согласие субъекта персональных данных на обработку его персональных данных; выполнение договора, стороной которого является субъект персональных данных; выполнение обязанностей, возложенных законодательством на Оператора; защита жизненно важных интересов субъектов персональных данных; осуществление правомерной деятельности Оператора. Оператор обеспечивает соответствие обработки персональных данных требованиям действующего законодательства.</p>
+    
+    <p><strong>Порядок и условия обработки персональных данных</strong></p>
+    <p>Обработка персональных данных осуществляется с соблюдением принципов и правил, установленных законодательством о персональных данных. Обработка включает сбор, запись, систематизацию, накопление, хранение, уточнение (обновление, изменение), извлечение, использование, передачу (распространение, предоставление, доступ), обезличивание, блокирование, удаление и уничтожение персональных данных. Обработка осуществляется как с использованием средств автоматизации, так и без использования таких средств. Хранение персональных данных осуществляется в форме, позволяющей определить субъекта персональных данных, не дольше, чем этого требуют цели обработки персональных данных. Обработанные персональные данные подлежат уничтожению либо обезличиванию по достижении целей обработки или в случае утраты необходимости в достижении этих целей.</p>
+    
+    <p><strong>Передача персональных данных третьим лицам</strong></p>
+    <p>Оператор не передает персональные данные третьим лицам, за исключением следующих случаев: субъект выразил согласие на такие действия; передача предусмотрена российским или иным применимым законодательством в рамках установленной законодательством процедуры; передача осуществляется в целях исполнения договора, стороной которого является субъект персональных данных; в случае реорганизации или продажи компании персональные данные могут быть переданы правопреемнику. При передаче персональных данных Оператор требует от третьих лиц обеспечения конфиденциальности и безопасности передаваемых персональных данных.</p>
+    
+    <p><strong>Меры по защите персональных данных</strong></p>
+    <p>Оператор принимает необходимые и достаточные организационные и технические меры для защиты персональных данных от неправомерного или случайного доступа, уничтожения, изменения, блокирования, копирования, распространения, а также от иных неправомерных действий с ними. К таким мерам относятся: определение угроз безопасности персональных данных при их обработке; применение организационных и технических мер по обеспечению безопасности персональных данных; оценка эффективности принимаемых мер по обеспечению безопасности персональных данных; учет машинных носителей персональных данных; обнаружение фактов несанкционированного доступа к персональным данным и принятие мер по их предотвращению; восстановление персональных данных, модифицированных или уничтоженных вследствие несанкционированного доступа к ним; установление правил доступа к персональным данным, обрабатываемым в информационной системе; контроль за принимаемыми мерами по обеспечению безопасности персональных данных.</p>
+    
+    <p><strong>Права субъектов персональных данных</strong></p>
+    <p>Субъект персональных данных имеет право: получать информацию, касающуюся обработки его персональных данных; требовать уточнения своих персональных данных, их блокирования или уничтожения в случае, если персональные данные являются неполными, устаревшими, неточными, незаконно полученными или не являются необходимыми для заявленной цели обработки; отозвать свое согласие на обработку персональных данных; требовать устранения неправомерных действий Оператора в отношении его персональных данных; обжаловать действия или бездействие Оператора в уполномоченный орган по защите прав субъектов персональных данных или в судебном порядке. Для реализации своих прав субъект персональных данных может обратиться к Оператору с соответствующим запросом.</p>
+    
+    <p><strong>Файлы cookie и аналогичные технологии</strong></p>
+    <p>Сайт Оператора использует файлы cookie и аналогичные технологии для улучшения пользовательского опыта, анализа посещаемости сайта и персонализации контента. Файлы cookie — это небольшие текстовые файлы, которые сохраняются на устройстве пользователя при посещении сайта. С помощью cookie мы можем собирать информацию о предпочтениях пользователей и настройках устройства. Пользователь может управлять использованием файлов cookie через настройки своего браузера, однако отключение cookie может привести к ограничению функциональности сайта.</p>
+    
+    <p><strong>Обработка персональных данных несовершеннолетних</strong></p>
+    <p>Услуги Оператора не предназначены для несовершеннолетних лиц. Оператор не собирает сознательно персональные данные лиц, не достигших 18 лет. Если родители или опекуны узнают, что их несовершеннолетний ребенок предоставил нам свои персональные данные без их согласия, они должны связаться с Оператором для удаления этих данных.</p>
+    
+    <p><strong>Обработка специальных категорий персональных данных</strong></p>
+    <p>Оператор не обрабатывает специальные категории персональных данных, касающиеся расовой, национальной принадлежности, политических взглядов, религиозных или философских убеждений, состояния здоровья, интимной жизни, за исключением случаев, предусмотренных законодательством.</p>
+    
+    <p><strong>Международная передача персональных данных</strong></p>
+    <p>Оператор не осуществляет международную передачу персональных данных за пределы территории Российской Федерации, за исключением случаев, когда такая передача разрешена законодательством Российской Федерации и обеспечивается адекватная защита прав субъектов персональных данных.</p>
+    
+    <p><strong>Срок хранения персональных данных</strong></p>
+    <p>Персональные данные обрабатываются в течение срока, необходимого для достижения целей их обработки, но не дольше, чем этого требуют положения действующего законодательства Российской Федерации. После достижения целей обработки или отзыва согласия субъекта персональные данные подлежат уничтожению или обезличиванию.</p>
+    
+    <p><strong>Изменения в Политике конфиденциальности</strong></p>
+    <p>Оператор оставляет за собой право вносить изменения в настоящую Политику конфиденциальности. Новая редакция Политики вступает в силу с момента ее размещения на сайте, если иное не предусмотрено новой редакцией Политики. Рекомендуется периодически проверять актуальность Политики. При существенных изменениях Оператор уведомит пользователей через сайт или по электронной почте.</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="confirmation-modal" id="confirmationModal">
+        <div class="confirmation-content">
+            <div class="confirmation-icon"><i class="fas fa-phone"></i></div>
+            <h2 class="confirmation-title">Спасибо за заявку!</h2>
+            <p class="confirmation-text">Мы получили вашу заявку на запись. Наш менеджер свяжется с вами в течение часа для согласования точного времени оказания услуг.</p>
+            <button class="confirmation-button" id="closeConfirmationModal">Понятно</button>
+        </div>
+    </div>
+
+    <!-- Стрелка наверх -->
+    <button class="back-to-top" id="backToTop" aria-label="Наверх">
+        ↑
+    </button>
+
+    <script src="../js/online.js"></script>
+
+</body>
+</html>
