@@ -713,25 +713,6 @@ footer {
     box-shadow: 0 0.25rem 0.9375rem rgba(212, 175, 55, 0.3);
     }
 
-    .mobile-callback:hover {
-        color: var(--white);
-        transform: scale(1.1);
-        background-color: rgba(212, 175, 55, 0.2);
-    }
-    
-    /* УВЕЛИЧИЛИ РАССТОЯНИЕ МЕЖДУ ЭЛЕМЕНТАМИ */
-    .mobile-left { 
-        display: flex; 
-        align-items: center; 
-        gap: 1.5rem; /* Увеличили с var(--space-md) = 1.5rem */
-    }
-    
-    .mobile-actions { 
-        display: flex; 
-        align-items: center; 
-        gap: 1.5rem; /* Увеличили с var(--space-md) = 1.5rem */
-    }
-
 .back-to-top.show {
     opacity: 1;
     visibility: visible;
@@ -777,11 +758,6 @@ footer {
         font-size: 3rem; /* Увеличили с 1.5rem */
         cursor: pointer;
         transition: all 0.3s ease;
-    }
-    
-    .mobile-callback:hover {
-        color: var(--white);
-        transform: scale(1.1);
     }
     
     /* УВЕЛИЧИЛИ РАССТОЯНИЯ МЕЖДУ ЭЛЕМЕНТАМИ */
@@ -852,14 +828,6 @@ footer {
         height: 0.4rem; /* Увеличили */
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ */
-    .mobile-left { 
-        gap: 1.8rem; /* Увеличили */
-    }
-    
-    .mobile-actions { 
-        gap: 1.8rem; /* Увеличили */
-    }
     
     .about-hero { height: 12rem; }
     .about-hero-title { font-size: 2.5rem; }
@@ -869,3 +837,4 @@ footer {
         
     .company-image { min-height: 15rem; }
 }
+
