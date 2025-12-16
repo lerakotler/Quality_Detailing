@@ -903,64 +903,80 @@ footer {
     margin-right: 0.5rem;
 }
 
-/* Адаптивность */
+/* Адаптивность с увеличенным лого, иконками и текстом на баннере */
 @media (max-width: 48rem) {
     :root {
         font-size: 14px;
     }
-    
-    .top-menu {
-        display: none;
-    }
-    
+
+    /* Скрываем обычное меню и шапку */
+    .top-menu,
     .header {
         display: none;
     }
-    
+
     .mobile-header {
-        display: block;
-    }
-    
-    .burger-menu {
         display: flex;
+        padding: 0.75rem 0;
     }
-    
+
+    /* Лого мобильной шапки */
+    .mobile-logo .logo-placeholder {
+        width: 12rem; /* увеличено */
+        height: 4.5rem; /* увеличено */
+    }
+
+    /* Иконка телефона крупнее */
+    .mobile-callback {
+        font-size: 2.5rem; /* увеличено */
+    }
+
+    /* Бургер-меню крупнее */
+    .burger-line {
+        width: 2rem;
+        height: 0.3rem;
+    }
+
+    /* Герой баннер */
     .services-hero {
-        height: 25rem;
+        height: 28rem;
     }
-    
+
     .hero-title {
-        font-size: 2.5rem;
+        font-size: 3rem;
+        line-height: 1.2;
     }
-    
+
     .hero-subtitle {
-        font-size: 1.25rem;
+        font-size: 1.75rem;
     }
-    
+
+    /* Портфолио и о нас */
     .portfolio-about-content {
         grid-template-columns: 1fr;
         gap: 1.5625rem;
     }
-    
+
     .about {
         height: auto;
-        min-height: 21.875rem;
+        min-height: 22rem;
     }
-    
+
     .callback-form-container {
         padding: var(--space-md);
     }
-    
+
+    /* Футер */
     .footer-row {
         flex-direction: column;
         align-items: center;
         gap: var(--space-sm);
     }
-    
+
     .container {
         padding: 0 var(--space-sm);
     }
-    
+
     .services-hero,
     .advantages,
     .portfolio-about,
@@ -969,7 +985,8 @@ footer {
         margin-right: var(--space-sm);
         max-width: calc(100% - 1.875rem);
     }
-    
+
+    /* Стрелка наверх */
     .back-to-top {
         bottom: 1rem;
         right: 1rem;
@@ -977,43 +994,52 @@ footer {
         height: 3.125rem;
         font-size: 1.875rem;
     }
-    
-    .mobile-logo .logo-placeholder {
-        width: 8.75rem;
-        height: 3.125rem;
-    }
 }
 
 @media (max-width: 30rem) {
     :root {
         font-size: 12px;
     }
-    
-    .services-hero {
-        height: 21.875rem;
+
+    /* Лого еще больше для маленьких экранов */
+    .mobile-logo .logo-placeholder {
+        width: 10rem;
+        height: 3.75rem;
     }
-    
-    .hero-title {
+
+    /* Иконка телефона */
+    .mobile-callback {
         font-size: 2rem;
     }
-    
+
+    /* Бургер-меню */
+    .burger-line {
+        width: 2.2rem;
+        height: 0.35rem;
+    }
+
+    /* Герой баннер */
+    .services-hero {
+        height: 24rem;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+        line-height: 1.2;
+    }
+
     .hero-subtitle {
-        font-size: 1rem;
+        font-size: 1.5rem;
     }
-    
-    .mobile-logo .logo-placeholder {
-        width: 7.5rem;
-        height: 2.8125rem;
-    }
-    
+
     .mobile-menu {
         width: 85%;
     }
-    
+
     .menu-items {
         gap: 1.5rem;
     }
-    
+
     .menu-items a {
         font-size: 1.125rem;
     }
