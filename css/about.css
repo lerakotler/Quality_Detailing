@@ -843,13 +843,13 @@ footer {
     
     /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА */
     .mobile-callback { 
-        font-size: 2.8rem; /* Увеличили */
+        font-size: 2.5rem; /* Увеличили */
     }
     
     /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
     .burger-line { 
-        width: 1.9rem; /* Увеличили */
-        height: 0.28rem; /* Увеличили */
+        width: 2.3rem; /* Увеличили */
+        height: 0.4rem; /* Увеличили */
     }
     
     /* УВЕЛИЧИЛИ РАССТОЯНИЯ */
@@ -869,4 +869,5 @@ footer {
         
     .company-image { min-height: 15rem; }
 }
+
 
