@@ -731,8 +731,15 @@ footer {
     
     .top-menu { display: none; }
     .header { display: none; }
-    .mobile-header { display: block; }
-    .burger-menu { display: flex; }
+    .mobile-header { 
+        display: block;
+        padding: 0.75rem 0;
+    }
+    
+    .burger-menu { 
+        display: flex;
+        gap: 0.35rem;
+    }
     
     .about-hero { height: 15rem; }
     .about-hero-title { font-size: 2.5rem; }
@@ -763,6 +770,11 @@ footer {
         max-width: calc(100% - 1.875rem);
     }
     
+    .burger-line { 
+        width: 1.8rem; /* Увеличили с 1.5625rem */
+        height: 0.25rem; /* Увеличили с 0.1875rem */
+        background-color: var(--accent-gold);
+    }
     /* Стрелка наверх для мобильных */
     .back-to-top {
         bottom: 1rem;
@@ -772,8 +784,11 @@ footer {
         font-size: 1.875rem;
     }
     
-    .mobile-logo .logo-placeholder { width: 8.75rem; height: 3.125rem; }
-}
+    .burger-line { 
+        width: 1.8rem; /* Увеличили с 1.5625rem */
+        height: 0.25rem; /* Увеличили с 0.1875rem */
+        background-color: var(--accent-gold);
+    }
 
 @media (max-width: 30rem) {
     :root { font-size: 12px; }
@@ -785,3 +800,4 @@ footer {
     .company-image { min-height: 15rem; }
 
 }
+
