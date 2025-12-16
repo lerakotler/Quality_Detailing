@@ -702,7 +702,7 @@ footer {
 
 /* Адаптивность */
 @media (max-width: 48rem) {
-    :root { font-size: 14px; }
+       :root { font-size: 14px; }
     
     .top-menu { display: none; }
     .header { display: none; }
@@ -751,21 +751,10 @@ footer {
         gap: 2rem; /* Увеличили */
     }
     
+    .blog-hero { height: 15rem; }
+    .blog-hero-title { font-size: 2.5rem; }
+    .blog-hero-subtitle { font-size: 1.25rem; }
     
-    .blog-hero {
-        height: 15rem;
-        margin: var(--space-lg) var(--space-sm);
-        max-width: calc(100% - 2rem);
-        border-radius: 0.9375rem; /* Сохраняем скругление для баннера */
-    }
-    
-    .blog-hero-title {
-        font-size: 2.5rem;
-    }
-    
-    .blog-hero-subtitle {
-        font-size: 1.25rem;
-    }
     
  /* Контейнер блога */
     .blog-container {
@@ -1027,18 +1016,11 @@ footer {
         width: 3.125rem;
         height: 3.125rem;
         font-size: 1.875rem;
-        border-radius: 50%; /* Сохраняем круглую форму */
-    }
-    
-    /* УВЕЛИЧИЛИ ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 11rem; /* Увеличили */
-        height: 4rem; /* Увеличили */
     }
 }
 
 @media (max-width: 30rem) {
-    :root { font-size: 12px; }
+        :root { font-size: 12px; }
     
     /* УВЕЛИЧИЛИ ЛОГОТИП */
     .mobile-logo .logo-placeholder { 
@@ -1065,33 +1047,12 @@ footer {
     .mobile-actions { 
         gap: 1.8rem; /* Увеличили */
     }
-    .blog-hero {
-        height: 12rem;
-        margin: var(--space-md) var(--space-xs);
-        max-width: calc(100% - 1rem);
-        padding: 0 var(--space-xs);
-        border-radius: 0.75rem; /* Немного меньше скругление */
-    }
     
-    .blog-hero-title {
-        font-size: 2.5rem;
-        padding: 0 var(--space-xs);
-    }
+    .blog-hero { height: 12rem; }
+    .blog-hero-title { font-size: 2.5rem; }
+    .blog-hero-subtitle { font-size: 1.5rem; }
     
-    .blog-hero-subtitle {
-        font-size: 1.5rem;
-        padding: 0 var(--space-xs);
-    }
-    
-    .mobile-logo .logo-placeholder {
-        width: 7.5rem;
-        height: 2.8125rem;
-        border-radius: 1.5rem; /* Сохраняем скругление */
-    }
-    
-    .mobile-menu {
-        width: 85%;
-    }
+    .mobile-menu { width: 85%; }
     
     .blog-image {
         height: 12.5rem;
@@ -1206,3 +1167,4 @@ footer {
     font-weight: bold;
     border-radius: 0.5rem;
 }
+
