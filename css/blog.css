@@ -702,59 +702,41 @@ footer {
 
 /* Адаптивность */
 @media (max-width: 48rem) {
-        :root { font-size: 14px; }
+    :root {
+        font-size: 14px;
+    }
     
-    .top-menu { display: none; }
-    .header { display: none; }
-    .mobile-header { 
+    .top-menu {
+        display: none;
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .mobile-header {
         display: block;
-        padding: 0.75rem 0;
     }
     
-    /* УВЕЛИЧИЛИ ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 12rem; /* Увеличили */
-        height: 4.5rem; /* Увеличили */
-    }
-    
-    .burger-menu { 
+    .burger-menu {
         display: flex;
-        gap: 0.35rem;
     }
     
-    /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
-    .burger-line { 
-        width: 2.1rem; /* Увеличили с 1.5625rem */
-        height: 0.3rem; /* Увеличили с 0.1875rem */
-        background-color: var(--accent-gold);
+    .blog-hero {
+        height: 15rem;
+        margin: var(--space-lg) var(--space-sm);
+        max-width: calc(100% - 2rem);
+        border-radius: 0.9375rem; /* Сохраняем скругление для баннера */
     }
     
-    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА (БЕЗ ФОНА И КРУГА) */
-    .mobile-callback { 
-        color: var(--accent-gold); 
-        font-size: 3rem; /* Увеличили с 1.5rem */
-        cursor: pointer;
-        transition: all 0.3s ease;
+    .blog-hero-title {
+        font-size: 2.5rem;
     }
     
-    .mobile-callback:hover {
-        color: var(--white);
-        transform: scale(1.1);
+    .blog-hero-subtitle {
+        font-size: 1.25rem;
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ МЕЖДУ ЭЛЕМЕНТАМИ */
-    .mobile-left { 
-        gap: 2rem; /* Увеличили */
-    }
-    
-    .mobile-actions { 
-        gap: 2rem; /* Увеличили */
-    }
-    
-    .blog-hero { height: 15rem; }
-    .blog-hero-title { font-size: 2.5rem; }
-    .blog-hero-subtitle { font-size: 1.25rem; }
-
     .blog-item-header {
         flex-direction: column;
         align-items: flex-start;
@@ -883,42 +865,46 @@ footer {
         font-size: 1.875rem;
         border-radius: 50%; /* Сохраняем круглую форму */
     }
+
+    .mobile-logo .logo-placeholder {
+        width: 8.75rem;
+        height: 3.125rem;
+        border-radius: 2rem; /* Сохраняем скругление логотипа */
+    }
 }
 
 @media (max-width: 30rem) {
-    :root { font-size: 12px; }
-    
-    /* УВЕЛИЧИЛИ ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 11rem; /* Увеличили */
-        height: 4rem; /* Увеличили */
+    :root {
+        font-size: 12px;
     }
     
-    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА */
-    .mobile-callback { 
-        font-size: 2.2rem; /* Увеличили */
+    .blog-hero {
+        height: 12rem;
+        margin: var(--space-md) var(--space-xs);
+        max-width: calc(100% - 1rem);
+        padding: 0 var(--space-xs);
+        border-radius: 0.75rem; /* Немного меньше скругление */
     }
     
-    /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
-    .burger-line { 
-        width: 2.3rem; /* Увеличили */
-        height: 0.4rem; /* Увеличили */
+    .blog-hero-title {
+        font-size: 2rem;
+        padding: 0 var(--space-xs);
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ */
-    .mobile-left { 
-        gap: 1.8rem; /* Увеличили */
+    .blog-hero-subtitle {
+        font-size: 1rem;
+        padding: 0 var(--space-xs);
     }
     
-    .mobile-actions { 
-        gap: 1.8rem; /* Увеличили */
+    .mobile-logo .logo-placeholder {
+        width: 7.5rem;
+        height: 2.8125rem;
+        border-radius: 1.5rem; /* Сохраняем скругление */
     }
     
-    .about-hero { height: 12rem; }
-    .about-hero-title { font-size: 2.5rem; }
-    .about-hero-subtitle { font-size: 1.5rem; }
-    
-    .mobile-menu { width: 85%; }
+    .mobile-menu {
+        width: 85%;
+    }
     
     .blog-image {
         height: 12.5rem;
