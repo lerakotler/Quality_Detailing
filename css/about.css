@@ -765,142 +765,65 @@ footer {
   box-shadow: 0 0.375rem 1.25rem rgba(212, 175, 55, 0.5);
 }
 
-/* Медиазапросы */
+/* Медиазапросы адаптивность */
 @media (max-width: 48rem) {
-  :root {
-    font-size: 14px;
-  }
+  :root { font-size: 14px; }
 
-  .top-menu {
-    display: none;
-  }
+  /* Скрываем обычное меню, показываем мобильное */
+  .top-menu { display: none; }
+  .header { display: none; }
+  .mobile-header { display: flex; padding: 0.75rem 0; }
 
-  .header {
-    display: none;
-  }
+  /* Лого и иконка телефона больше */
+  .mobile-logo .logo-placeholder { width: 12rem; height: 4.5rem; }
+  .mobile-callback { font-size: 3rem; }
 
-  .mobile-header {
-    display: block;
-    padding: 0.75rem 0;
-  }
+  /* Бургер меню */
+  .burger-menu { display: flex; flex-direction: column; gap: 0.35rem; }
+  .burger-line { width: 2.1rem; height: 0.3rem; }
 
-  .mobile-logo .logo-placeholder {
-    width: 12rem;
-    height: 4.5rem;
-  }
+  .mobile-left { gap: 2rem; }
+  .mobile-actions { gap: 2rem; }
 
-  .burger-menu {
-    display: flex;
-    gap: 0.35rem;
-  }
+  /* Герой баннер */
+  .about-hero { height: 15rem; }
+  .about-hero-title { font-size: 2.5rem; }
+  .about-hero-subtitle { font-size: 1.25rem; }
 
-  .burger-line {
-    width: 2.1rem;
-    height: 0.3rem;
-  }
+  /* Сетки и фото */
+  .company-info { grid-template-columns: 1fr; gap: var(--space-md); }
+  .company-image { min-height: 18rem; order: -1; }
+  .values-grid, .team-grid, .achievements-grid { grid-template-columns: 1fr; }
 
-  .mobile-callback {
-    font-size: 3rem;
-  }
+  /* Футер */
+  .footer-row { flex-direction: column; align-items: center; gap: var(--space-sm); }
 
-  .mobile-left {
-    gap: 2rem;
-  }
-
-  .mobile-actions {
-    gap: 2rem;
-  }
-
-  .about-hero {
-    height: 15rem;
-  }
-
-  .about-hero-title {
-    font-size: 2.5rem;
-  }
-
-  .about-hero-subtitle {
-    font-size: 1.25rem;
-  }
-
-  .company-info {
-    grid-template-columns: 1fr;
-    gap: var(--space-md);
-  }
-
-  .company-image {
-    min-height: 18rem;
-    order: -1;
-  }
-
-  .values-grid,
-  .team-grid,
-  .achievements-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .footer-row {
-    flex-direction: column;
-    align-items: center;
-    gap: var(--space-sm);
-  }
-
-  .container {
+  /* Контейнеры */
+  .container, .about-hero, .about-section { 
     padding: 0 var(--space-sm);
-  }
-
-  .about-hero,
-  .about-section {
     margin-left: var(--space-sm);
     margin-right: var(--space-sm);
     max-width: calc(100% - 1.875rem);
   }
 
-  .back-to-top {
-    bottom: 1rem;
-    right: 1rem;
-    width: 3.125rem;
-    height: 3.125rem;
-    font-size: 1.875rem;
-  }
+  /* Стрелка наверх */
+  .back-to-top { bottom: 1rem; right: 1rem; width: 3.125rem; height: 3.125rem; font-size: 1.875rem; }
 }
 
 @media (max-width: 30rem) {
-  :root {
-    font-size: 12px;
-  }
+  :root { font-size: 12px; }
 
-  .mobile-logo .logo-placeholder {
-    width: 11rem;
-    height: 4rem;
-  }
+  /* Лого и телефон */
+  .mobile-logo .logo-placeholder { width: 11rem; height: 4rem; }
+  .mobile-callback { font-size: 2.2rem; }
 
-  .mobile-callback {
-    font-size: 2.2rem;
-  }
+  /* Бургер линии */
+  .burger-line { width: 2.3rem; height: 0.4rem; }
 
-  .burger-line {
-    width: 2.3rem;
-    height: 0.4rem;
-  }
+  /* Герой баннер */
+  .about-hero { height: 12rem; }
+  .about-hero-title { font-size: 2.5rem; }
+  .about-hero-subtitle { font-size: 1.5rem; }
 
-  .about-hero {
-    height: 12rem;
-  }
-
-  .about-hero-title {
-    font-size: 2.5rem;
-  }
-
-  .about-hero-subtitle {
-    font-size: 1.5rem;
-  }
-
-  .mobile-menu {
-    width: 85%;
-  }
-
-  .company-image {
-    min-height: 15rem;
-  }
-}
+  /* Мобильное меню */
+  .mobile-menu { width: 85%; }
