@@ -8,7 +8,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Roboto+Condensed:wght@400;700&family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="../css/contact.css">
-    <script src="https://api-maps.yandex.ru/2.1/?apikey=f9f359d8-176e-4c4a-a052-5154a89a74a5&lang=ru_RU" type="text/javascript"></script>
+    <!-- ЗАМЕНИТЕ "ВАШ_API_КЛЮЧ" на реальный ключ Яндекс Карт -->
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=ВАШ_API_КЛЮЧ&lang=ru_RU" type="text/javascript"></script>
 
 </head>
 <body>
@@ -183,12 +184,8 @@
                 <!-- Карта с отмеченной точкой -->
                 <h2 class="section-title" id="map">Мы на карте</h2>
                 <div class="map-container">
-                    <iframe 
-                        id="yandex-map" 
-                        src="https://yandex.ru/map-widget/v1/?um=constructor%3A0777df5a3c339229eb3e095b8af62908d1d23ce447795ff31f980125ce258957&amp;source=constructor&amp;scroll=false&amp;lang=ru_RU&amp;mode=search&amp;text=Кронштадтский+бульвар%2C+д.+37Б%2C+Москва"
-                        frameborder="0"
-                        allowfullscreen="true">
-                    </iframe>
+                    <!-- ИНТЕРАКТИВНАЯ КАРТА ЯНДЕКС -->
+                    <div id="yandex-map"></div>
                 </div>
             </div>
         </div>
