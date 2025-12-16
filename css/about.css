@@ -779,16 +779,6 @@ footer {
     .mobile-callback { 
         color: var(--accent-gold); 
         font-size: 2rem; /* Увеличили с 1.5rem */
-        cursor: pointer;
-        transition: all 0.3s ease;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        width: 3rem;
-        height: 3rem;
-        border-radius: 50%;
-        background-color: rgba(212, 175, 55, 0.1);
-    }
     
     .mobile-callback:hover {
         color: var(--white);
@@ -798,8 +788,8 @@ footer {
     
     /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
     .burger-line { 
-        width: 1.8rem; /* Увеличили с 1.5625rem */
-        height: 0.25rem; /* Увеличили с 0.1875rem */
+        width: 2rem; /* Увеличили с 1.5625rem */
+        height: 0.30rem; /* Увеличили с 0.1875rem */
         background-color: var(--accent-gold);
     }
     
@@ -926,15 +916,13 @@ footer {
     
     /* УВЕЛИЧИЛИ ИКОНКУ ТРУБКИ */
     .mobile-callback { 
-        font-size: 1.8rem;
-        width: 2.8rem;
-        height: 2.8rem;
+        font-size: 2rem; /* Просто шрифт, без круга */
     }
     
     /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
     .burger-line { 
-        width: 1.6rem;
-        height: 0.22rem;
+        width: 2rem;
+        height: 0.28rem;
     }
     
     /* УВЕЛИЧИЛИ РАССТОЯНИЯ */
@@ -1027,5 +1015,6 @@ footer {
         transform: scale(1.08);
     }
 }
+
 
 
