@@ -843,7 +843,7 @@ footer {
     
     /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА */
     .mobile-callback { 
-        font-size: 2.5rem; /* Увеличили */
+        font-size: 2.2rem; /* Увеличили */
     }
     
     /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
@@ -869,5 +869,6 @@ footer {
         
     .company-image { min-height: 15rem; }
 }
+
 
 
