@@ -139,7 +139,7 @@ function initYandexMap() {
     
     ymaps.ready(function() {
         // Координаты Кронштадтского бульвара 37Б, Москва
-        const coordinates = [55.847550, 37.516450];
+        const coordinates = [55.848463455];
         
         // Проверяем, существует ли элемент для карты
         const mapElement = document.getElementById('yandex-map');
