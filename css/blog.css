@@ -1019,3 +1019,64 @@ footer {
     font-weight: bold;
     border-radius: 0.5rem;
 }
+
+/* ================= MOBILE HEADER UPGRADE ================= */
+@media (max-width: 48rem) {
+
+    .header,
+    .top-menu {
+        display: none;
+    }
+
+    .mobile-header {
+        display: block;
+        padding: 0.75rem 0;
+    }
+
+    .mobile-top-bar {
+        padding: 0 var(--space-sm);
+    }
+
+    .mobile-left,
+    .mobile-actions {
+        gap: 2rem;
+    }
+
+    .mobile-logo .logo-placeholder {
+        width: 12rem;
+        height: 4.5rem;
+    }
+
+    .burger-menu {
+        display: flex;
+        gap: 0.35rem;
+    }
+
+    .burger-line {
+        width: 2.1rem;
+        height: 0.3rem;
+    }
+
+    .mobile-callback {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 30rem) {
+
+    .mobile-logo .logo-placeholder {
+        width: 11rem;
+        height: 4rem;
+    }
+
+    .mobile-callback {
+        font-size: 2.2rem;
+    }
+
+    .burger-line {
+        width: 2.3rem;
+        height: 0.4rem;
+    }
+}
+
+
