@@ -903,80 +903,38 @@ footer {
     margin-right: 0.5rem;
 }
 
-/* Адаптивность с увеличенным лого, иконками и текстом на баннере */
+/* Адаптивность */
 @media (max-width: 48rem) {
-    :root {
-        font-size: 14px;
-    }
+    :root { font-size: 14px; }
 
-    /* Скрываем обычное меню и шапку */
-    .top-menu,
-    .header {
-        display: none;
-    }
+    /* Скрываем обычное меню, показываем мобильное */
+    .top-menu { display: none; }
+    .header { display: none; }
+    .mobile-header { display: flex; padding: 0.75rem 0; }
 
-    .mobile-header {
-        display: flex;
-        padding: 0.75rem 0;
-    }
+    /* Лого и иконка телефона больше */
+    .mobile-logo .logo-placeholder { width: 12rem; height: 4.5rem; }
+    .mobile-callback { font-size: 3rem; }
 
-    /* Лого мобильной шапки */
-    .mobile-logo .logo-placeholder {
-        width: 12rem; /* увеличено */
-        height: 4.5rem; /* увеличено */
-    }
-
-    /* Иконка телефона крупнее */
-    .mobile-callback {
-        font-size: 2.5rem; /* увеличено */
-    }
-
-    /* Бургер-меню крупнее */
-    .burger-line {
-        width: 2rem;
-        height: 0.3rem;
-    }
+    /* Бургер меню */
+    .burger-menu { display: flex; flex-direction: column; gap: 0.35rem; }
+    .burger-line { width: 2.1rem; height: 0.3rem; background-color: var(--accent-gold); }
 
     /* Герой баннер */
-    .services-hero {
-        height: 28rem;
-    }
+    .services-hero { height: 25rem; }
+    .hero-title { font-size: 3rem; }
+    .hero-subtitle { font-size: 1.5rem; }
 
-    .hero-title {
-        font-size: 3rem;
-        line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 1.75rem;
-    }
-
-    /* Портфолио и о нас */
-    .portfolio-about-content {
-        grid-template-columns: 1fr;
-        gap: 1.5625rem;
-    }
-
-    .about {
-        height: auto;
-        min-height: 22rem;
-    }
-
-    .callback-form-container {
-        padding: var(--space-md);
-    }
+    /* Сетки */
+    .portfolio-about-content { grid-template-columns: 1fr; gap: var(--space-md); }
+    .about { height: auto; min-height: 21.875rem; }
+    .callback-form-container { padding: var(--space-md); }
 
     /* Футер */
-    .footer-row {
-        flex-direction: column;
-        align-items: center;
-        gap: var(--space-sm);
-    }
+    .footer-row { flex-direction: column; align-items: center; gap: var(--space-sm); }
+    .container { padding: 0 var(--space-sm); }
 
-    .container {
-        padding: 0 var(--space-sm);
-    }
-
+    /* Отступы для всех секций */
     .services-hero,
     .advantages,
     .portfolio-about,
@@ -987,60 +945,25 @@ footer {
     }
 
     /* Стрелка наверх */
-    .back-to-top {
-        bottom: 1rem;
-        right: 1rem;
-        width: 3.125rem;
-        height: 3.125rem;
-        font-size: 1.875rem;
-    }
+    .back-to-top { bottom: 1rem; right: 1rem; width: 3.125rem; height: 3.125rem; font-size: 1.875rem; }
 }
 
 @media (max-width: 30rem) {
-    :root {
-        font-size: 12px;
-    }
+    :root { font-size: 12px; }
 
-    /* Лого еще больше для маленьких экранов */
-    .mobile-logo .logo-placeholder {
-        width: 10rem;
-        height: 3.75rem;
-    }
+    .services-hero { height: 22rem; }
+    .hero-title { font-size: 2.5rem; }
+    .hero-subtitle { font-size: 1.25rem; }
 
-    /* Иконка телефона */
-    .mobile-callback {
-        font-size: 2rem;
-    }
+    .mobile-logo .logo-placeholder { width: 10rem; height: 3.5rem; }
+    .mobile-callback { font-size: 2.2rem; }
 
-    /* Бургер-меню */
-    .burger-line {
-        width: 2.2rem;
-        height: 0.35rem;
-    }
+    .burger-line { width: 2.3rem; height: 0.4rem; }
 
-    /* Герой баннер */
-    .services-hero {
-        height: 24rem;
-    }
+    .mobile-menu { width: 85%; }
 
-    .hero-title {
-        font-size: 2.5rem;
-        line-height: 1.2;
-    }
-
-    .hero-subtitle {
-        font-size: 1.5rem;
-    }
-
-    .mobile-menu {
-        width: 85%;
-    }
-
-    .menu-items {
-        gap: 1.5rem;
-    }
-
-    .menu-items a {
-        font-size: 1.125rem;
-    }
+    .menu-items { gap: 1.5rem; }
+    .menu-items a { font-size: 1.125rem; }
 }
+
+
