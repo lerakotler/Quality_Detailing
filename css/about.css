@@ -743,21 +743,12 @@ footer {
     transform: scale(1.1);
     box-shadow: 0 0.375rem 1.25rem rgba(212, 175, 55, 0.5);
 }
-
 /* Адаптивность */
 @media (max-width: 48rem) {
-    :root { 
-        font-size: 14px; 
-    }
+    :root { font-size: 14px; }
     
-    .top-menu { 
-        display: none; 
-    }
-    
-    .header { 
-        display: none; 
-    }
-    
+    .top-menu { display: none; }
+    .header { display: none; }
     .mobile-header { 
         display: block;
         padding: 0.75rem 0;
@@ -772,48 +763,31 @@ footer {
     .mobile-logo .logo-placeholder { 
         width: 11rem; /* Увеличили с 10rem */
         height: 4.5rem; /* Увеличили с 3.75rem */
-        border-radius: 1.5rem;
-    }
-    
-    /* УВЕЛИЧИЛИ ИКОНКУ ТРУБКИ */
-    .mobile-callback { 
-        color: var(--accent-gold); 
-        font-size: 2rem; /* Увеличили с 1.5rem */
-    
-    .mobile-callback:hover {
-        color: var(--white);
-        transform: scale(1.1);
-        background-color: rgba(212, 175, 55, 0.2);
     }
     
     /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
     .burger-line { 
-        width: 2rem; /* Увеличили с 1.5625rem */
-        height: 0.30rem; /* Увеличили с 0.1875rem */
+        width: 1.8rem; /* Увеличили с 1.5625rem */
+        height: 0.25rem; /* Увеличили с 0.1875rem */
         background-color: var(--accent-gold);
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ МЕЖДУ ЭЛЕМЕНТАМИ */
-    .mobile-left { 
-        gap: 1.5rem; /* Увеличили */
+    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА (ТОЛЬКО РАЗМЕР ШРИФТА) */
+    .mobile-callback { 
+        color: var(--accent-gold); 
+        font-size: 2rem; /* Увеличили с 1.5rem */
+        cursor: pointer;
+        transition: all 0.3s ease;
     }
     
-    .mobile-actions { 
-        gap: 1.5rem; /* Увеличили */
+    .mobile-callback:hover {
+        color: var(--white);
+        transform: scale(1.1);
     }
     
-    /* ОСТАЛЬНЫЕ СТИЛИ */
-    .about-hero { 
-        height: 15rem; 
-    }
-    
-    .about-hero-title { 
-        font-size: 2.5rem; 
-    }
-    
-    .about-hero-subtitle { 
-        font-size: 1.25rem; 
-    }
+    .about-hero { height: 15rem; }
+    .about-hero-title { font-size: 2.5rem; }
+    .about-hero-subtitle { font-size: 1.25rem; }
     
     .company-info {
         grid-template-columns: 1fr;
@@ -831,16 +805,9 @@ footer {
         grid-template-columns: 1fr;
     }
     
-    .footer-row { 
-        flex-direction: column; 
-        align-items: center; 
-        gap: var(--space-sm); 
-    }
+    .footer-row { flex-direction: column; align-items: center; gap: var(--space-sm); }
     
-    .container { 
-        padding: 0 var(--space-sm); 
-    }
-    
+    .container { padding: 0 var(--space-sm); }
     .about-hero, .about-section {
         margin-left: var(--space-sm);
         margin-right: var(--space-sm);
@@ -855,166 +822,59 @@ footer {
         height: 3.125rem;
         font-size: 1.875rem;
     }
-    
-    /* УВЕЛИЧИЛИ МОБИЛЬНОЕ МЕНЮ */
-    .mobile-menu {
-        width: 85%; /* Увеличили с 70% */
-        padding: 6rem var(--space-md) var(--space-md);
-    }
-    
-    .mobile-menu-items { 
-        gap: 1.8rem; /* Увеличили */
-    }
-    
-    .mobile-menu-items a { 
-        font-size: 1.6rem; /* Увеличили с 1.5rem */
-        padding: 1rem 0;
-        border-bottom: 0.125rem solid var(--medium-gray);
-    }
-    
-    .close-menu { 
-        top: var(--space-lg);
-        right: var(--space-lg);
-        font-size: 2.2rem; /* Увеличили с 1.875rem */
-        width: 3rem;
-        height: 3rem;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        border-radius: 50%;
-        background-color: rgba(212, 175, 55, 0.1);
-    }
-    
-    .close-menu:hover {
-        background-color: rgba(212, 175, 55, 0.2);
-    }
 }
 
 @media (max-width: 30rem) {
-    :root { 
-        font-size: 12px; 
-    }
-    
-    .about-hero { 
-        height: 12rem; 
-    }
-    
-    .about-hero-title { 
-        font-size: 2.5rem; 
-    }
-    
-    .about-hero-subtitle { 
-        font-size: 1.5rem; 
-    }
+    :root { font-size: 12px; }
     
     /* УВЕЛИЧИЛИ ЛОГОТИП */
     .mobile-logo .logo-placeholder { 
         width: 9rem; /* Увеличили с 6.5rem */
         height: 3.5rem; /* Увеличили с 2.5rem */
-        border-radius: 1.2rem;
     }
     
-    /* УВЕЛИЧИЛИ ИКОНКУ ТРУБКИ */
+    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА (ТОЛЬКО РАЗМЕР ШРИФТА) */
     .mobile-callback { 
-        font-size: 2rem; /* Просто шрифт, без круга */
+        font-size: 1.8rem; /* Увеличили */
     }
     
     /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
     .burger-line { 
-        width: 2rem;
-        height: 0.28rem;
+        width: 1.6rem; /* Увеличили */
+        height: 0.22rem; /* Увеличили */
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ */
+    .about-hero { height: 12rem; }
+    .about-hero-title { font-size: 2.5rem; }
+    .about-hero-subtitle { font-size: 1.5rem; }
+    
+    .mobile-menu { width: 85%; }
+    
+    .company-image { min-height: 15rem; }
+    
     .mobile-left { 
-        gap: 1.2rem;
+        gap: 1.2rem; /* Увеличили */
     }
     
     .mobile-actions { 
-        gap: 1.2rem;
-    }
-    
-    .mobile-menu { 
-        width: 90%; /* Увеличили с 85% */
-        padding: 5rem var(--space-sm) var(--space-md);
-    }
-    
-    .mobile-menu-items a {
-        font-size: 1.4rem; /* Увеличили с 1.125rem */
-        padding: 0.875rem 0;
-    }
-    
-    .close-menu {
-        font-size: 2rem;
-        width: 2.8rem;
-        height: 2.8rem;
-    }
-    
-    .company-image { 
-        min-height: 15rem; 
+        gap: 1.2rem; /* Увеличили */
     }
 }
 
 @media (max-width: 360px) {
-    /* ДЛЯ ОЧЕНЬ УЗКИХ ЭКРАНОВ */
+    /* УВЕЛИЧИЛИ ЛОГОТИП ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
     .mobile-logo .logo-placeholder { 
         width: 7.5rem; /* Увеличили с 5.5rem */
         height: 3rem; /* Увеличили с 2rem */
-        border-radius: 1rem;
     }
     
+    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА */
     .mobile-callback { 
         font-size: 1.6rem;
-        width: 2.5rem;
-        height: 2.5rem;
     }
     
+    /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
     .burger-line {
         width: 1.4rem; /* Увеличили с 1.25rem */
     }
-    
-    .about-hero-title { 
-        font-size: 2.2rem; 
-    }
-    
-    .about-hero-subtitle { 
-        font-size: 1.2rem; 
-    }
 }
-
-/* Дополнительные улучшения для тач-устройств */
-@media (max-width: 48rem) {
-    /* УВЕЛИЧИЛИ ОБЛАСТЬ КЛИКА */
-    .mobile-callback,
-    .burger-menu,
-    .close-menu {
-        min-height: 48px;
-        min-width: 48px;
-        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
-        transition: all 0.3s ease;
-    }
-    
-    .burger-menu {
-        padding: 12px 8px; /* Увеличили область клика */
-    }
-    
-    .mobile-callback:hover,
-    .burger-menu:hover,
-    .close-menu:hover {
-        box-shadow: 0 6px 20px rgba(0, 0, 0, 0.25);
-        transform: translateY(-2px);
-    }
-    
-    /* Анимация логотипа */
-    .logo-placeholder img {
-        transform: scale(1.05);
-        transition: transform 0.3s ease;
-    }
-    
-    .logo-placeholder:hover img {
-        transform: scale(1.08);
-    }
-}
-
-
-
