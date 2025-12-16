@@ -702,144 +702,111 @@ footer {
 
 /* Адаптивность */
 @media (max-width: 48rem) {
-       :root { font-size: 14px; }
+    :root {
+        font-size: 14px;
+    }
     
-    .top-menu { display: none; }
-    .header { display: none; }
-    .mobile-header { 
+    .top-menu {
+        display: none;
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .mobile-header {
         display: block;
-        padding: 0.75rem 0;
     }
     
-    /* УВЕЛИЧИЛИ ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 12rem; /* Увеличили */
-        height: 4.5rem; /* Увеличили */
-    }
-    
-    .burger-menu { 
+    .burger-menu {
         display: flex;
-        gap: 0.35rem;
     }
     
-    /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
-    .burger-line { 
-        width: 2.1rem; /* Увеличили с 1.5625rem */
-        height: 0.3rem; /* Увеличили с 0.1875rem */
-        background-color: var(--accent-gold);
+    .blog-hero {
+        height: 15rem;
+        margin: var(--space-lg) var(--space-sm);
+        max-width: calc(100% - 2rem);
+        border-radius: 0.9375rem;
     }
     
-    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА (БЕЗ ФОНА И КРУГА) */
-    .mobile-callback { 
-        color: var(--accent-gold); 
-        font-size: 3rem; /* Увеличили с 1.5rem */
-        cursor: pointer;
-        transition: all 0.3s ease;
+    .blog-hero-title {
+        font-size: 2.5rem;
     }
     
-    .mobile-callback:hover {
-        color: var(--white);
-        transform: scale(1.1);
+    .blog-hero-subtitle {
+        font-size: 1.25rem;
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ МЕЖДУ ЭЛЕМЕНТАМИ */
-    .mobile-left { 
-        gap: 2rem; /* Увеличили */
-    }
-    
-    .mobile-actions { 
-        gap: 2rem; /* Увеличили */
-    }
-    
-    .blog-hero { height: 15rem; }
-    .blog-hero-title { font-size: 2.5rem; }
-    .blog-hero-subtitle { font-size: 1.25rem; }
-    
-    
- /* Контейнер блога */
+    /* ИСПРАВЛЕНИЕ БЛОКА СТАТЕЙ */
     .blog-container {
         padding: var(--space-sm);
-        margin: 0;
+        margin: 0 auto;
         width: 100%;
+        max-width: calc(100% - 2rem);
         border-radius: 0.9375rem;
         overflow: hidden;
     }
-
-    /* Заголовок секции */
+    
     .section-title {
-        font-size: 1.8rem !important;
+        font-size: 1.8rem;
         margin-bottom: var(--space-md);
         text-align: center;
         padding: 0 var(--space-xs);
         line-height: 1.3;
         word-break: break-word;
+        color: #000000 !important;
     }
-
-    /* Список статей */
+    
     .blog-list {
         display: flex;
         flex-direction: column;
-        gap: var(--space-sm) !important; /* Уменьшили расстояние между статьями */
+        gap: var(--space-sm);
         padding: 0;
         margin: 0;
     }
-
-    /* Элемент статьи */
+    
     .blog-item {
-        margin: 0 !important;
+        margin: 0;
         border-radius: 0.625rem;
         overflow: hidden;
         box-shadow: 0 0.125rem 0.25rem rgba(0,0,0,0.1);
     }
-
-    /* Хедер статьи */
+    
     .blog-item-header {
-        padding: var(--space-sm) !important;
+        padding: var(--space-sm);
         display: flex;
         flex-direction: column;
         align-items: flex-start;
-        gap: 0.5rem !important; /* Уменьшили внутренние отступы */
+        gap: 0.5rem;
         background: var(--white);
         border-radius: 0.625rem 0.625rem 0 0;
         position: relative;
     }
-
-    /* Заголовок статьи */
+    
     .blog-title {
-        font-size: 1.2rem !important;
+        font-size: 1.2rem;
         font-weight: 700;
         color: #000000;
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
         line-height: 1.3;
-        width: calc(100% - 2rem); /* Оставляем место для иконки */
-        word-break: break-word; /* Перенос длинных слов */
-        overflow-wrap: break-word; /* Перенос длинных слов */
+        width: calc(100% - 2rem);
+        word-break: break-word;
+        overflow-wrap: break-word;
     }
-
-    /* Мета-информация */
+    
     .blog-meta {
         display: flex;
         flex-wrap: wrap;
-        gap: 0.75rem !important; /* Уменьшили расстояние */
-        font-size: 0.8rem !important;
+        gap: 0.75rem;
+        font-size: 0.8rem;
         color: #666;
         width: 100%;
         justify-content: flex-start;
-        margin: 0 !important;
-        padding: 0 !important;
+        margin: 0;
+        padding: 0;
     }
-
-    /* Категория и дата */
-    .blog-category,
-    .blog-date {
-        padding: 0.25rem 0.5rem;
-        background: #f0f0f0;
-        border-radius: 0.25rem;
-        font-size: 0.75rem;
-    }
-
-    /* Иконка открытия/закрытия */
+    
     .blog-toggle {
         position: absolute;
         right: var(--space-sm);
@@ -848,70 +815,72 @@ footer {
         color: var(--accent-gold);
         transition: transform 0.3s ease;
     }
-
+    
     .blog-item.active .blog-toggle {
         transform: rotate(180deg);
     }
-
-    /* Контент статьи */
+    
     .blog-content {
         background: #f9f9f9;
         border-radius: 0 0 0.625rem 0.625rem;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.5s ease;
     }
-
-    .blog-item.active .blog-content {
-        max-height: 2000px;
-    }
-
-    /* Текст статьи */
+    
     .blog-text,
     .content-before-photo {
-        padding: var(--space-sm) !important;
+        padding: var(--space-sm);
         color: #333;
         line-height: 1.5;
         font-size: 0.95rem;
     }
-
+    
     .blog-text p {
         margin-bottom: 0.75rem;
     }
-
-    /* Изображение в статье */
+    
     .blog-image {
-        width: 100% !important;
-        height: 12rem !important;
-        margin: 0 !important;
-        border-radius: 0 !important;
+        width: 100%;
+        height: 12rem;
+        margin: 0;
+        border-radius: 0;
         overflow: hidden;
     }
-
+    
     .blog-image img {
         width: 100%;
         height: 100%;
         object-fit: cover;
     }
-
-    /* Первый и последний элементы */
-    .blog-list > .blog-item:first-child {
-        border-radius: 0.625rem 0.625rem 0 0;
+    
+    /* ИСПРАВЛЕНИЕ ФОРМЫ */
+    .callback-form-section {
+        margin-left: var(--space-sm);
+        margin-right: var(--space-sm);
+        max-width: calc(100% - 2rem);
+        padding-left: 0;
+        padding-right: 0;
     }
-
-    .blog-list > .blog-item:last-child {
-        border-radius: 0 0 0.625rem 0.625rem;
-        margin-bottom: 0;
-    }
-
-    .blog-list > .blog-item:only-child {
-        border-radius: 0.625rem;
-    }
-}
-
+    
     .callback-form-container {
         padding: var(--space-md);
-        border-radius: 0.9375rem; /* Сохраняем скругление для формы */
+        border-radius: 0.9375rem;
+        margin: 0 auto;
+        width: 100%;
+    }
+    
+    .form-title {
+        font-size: 1.8rem;
+        margin-bottom: var(--space-md);
+        color: #000000;
+    }
+    
+    .form-group input {
+        padding: 1rem var(--space-sm);
+        font-size: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 1rem var(--space-md);
+        font-size: 1.1rem;
     }
     
     .footer-row {
@@ -926,87 +895,27 @@ footer {
         max-width: 100%;
     }
     
-    /* Исправлено для мобильных */
-    .blog-section,
-    .callback-form-section {
-        margin-left: var(--space-sm);
-        margin-right: var(--space-sm);
-        max-width: calc(100% - 2rem);
-        padding-left: 0;
-        padding-right: 0;
+    /* Мобильная шапка с увеличенными элементами */
+    .mobile-logo .logo-placeholder {
+        width: 12rem;
+        height: 4.5rem;
     }
     
-    /* Блог контейнер для мобильных - СКРУГЛЯЕМ УГЛЫ */
-    .blog-container {
-        padding: var(--space-sm);
-        margin-left: 0; /* Убрали отрицательный margin */
-        margin-right: 0;
-        width: 100%;
-        border-radius: 0.9375rem; /* Скругление углов */
-        overflow: hidden; /* Чтобы содержимое не выходило за скругленные углы */
+    .burger-line {
+        width: 2.1rem;
+        height: 0.3rem;
     }
     
-    /* Список статей для мобильных */
-    .blog-list {
-        padding: 0;
+    .mobile-callback {
+        font-size: 3rem;
     }
     
-    /* Элемент статьи для мобильных - СКРУГЛЯЕМ УГЛЫ */
-    .blog-item {
-        margin: 0 0 var(--space-md) 0; /* Только нижний отступ */
-        border-radius: 0.625rem; /* Скругление углов */
-        overflow: hidden; /* Чтобы содержимое не выходило за скругленные углы */
+    .mobile-left {
+        gap: 2rem;
     }
     
-    /* Первый элемент статьи - скругление сверху */
-    .blog-list > .blog-item:first-child {
-        border-radius: 0.625rem 0.625rem 0 0;
-    }
-    
-    /* Последний элемент статьи - скругление снизу */
-    .blog-list > .blog-item:last-child {
-        border-radius: 0 0 0.625rem 0.625rem;
-        margin-bottom: 0;
-    }
-    
-    /* Если только одна статья */
-    .blog-list > .blog-item:only-child {
-        border-radius: 0.625rem;
-    }
-    
-    /* Хедер статьи для мобильных - скругление сверху */
-    .blog-item-header {
-        border-radius: 0.625rem 0.625rem 0 0;
-        padding: var(--space-sm);
-    }
-    
-    /* Контент статьи */
-    .blog-content {
-        border-radius: 0 0 0.625rem 0.625rem;
-    }
-    
-    /* Текст внутри статьи */
-    .blog-text,
-    .content-before-photo {
-        padding: var(--space-sm);
-    }
-    
-    /* Изображение внутри статьи */
-    .blog-content .blog-image {
-        margin: 0; /* Убираем внешние отступы */
-        width: 100%; /* Полная ширина */
-        border-radius: 0; /* Убираем скругление, так как оно внутри скругленного контейнера */
-    }
-    
-    /* Контейнер изображения в контенте */
-    .blog-content .blog-image img {
-        border-radius: 0; /* Убираем скругление у самого изображения */
-    }
-    
-    /* Пагинация для мобильных */
-    .pagination {
-        margin-top: var(--space-md);
-        padding: 0 var(--space-xs);
+    .mobile-actions {
+        gap: 2rem;
     }
     
     /* Стрелка наверх для мобильных */
@@ -1016,96 +925,139 @@ footer {
         width: 3.125rem;
         height: 3.125rem;
         font-size: 1.875rem;
+        border-radius: 50%;
     }
 }
 
 @media (max-width: 30rem) {
-        :root { font-size: 12px; }
-    
-    /* УВЕЛИЧИЛИ ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 11rem; /* Увеличили */
-        height: 4rem; /* Увеличили */
+    :root {
+        font-size: 12px;
     }
     
-    /* УВЕЛИЧИЛИ ИКОНКУ ТЕЛЕФОНА */
-    .mobile-callback { 
-        font-size: 2.2rem; /* Увеличили */
+    .blog-hero {
+        height: 12rem;
+        margin: var(--space-md) var(--space-xs);
+        max-width: calc(100% - 1rem);
+        padding: 0 var(--space-xs);
+        border-radius: 0.75rem;
     }
     
-    /* УВЕЛИЧИЛИ БУРГЕР МЕНЮ */
-    .burger-line { 
-        width: 2.3rem; /* Увеличили */
-        height: 0.4rem; /* Увеличили */
+    .blog-hero-title {
+        font-size: 2rem;
+        padding: 0 var(--space-xs);
     }
     
-    /* УВЕЛИЧИЛИ РАССТОЯНИЯ */
-    .mobile-left { 
-        gap: 1.8rem; /* Увеличили */
+    .blog-hero-subtitle {
+        font-size: 1rem;
+        padding: 0 var(--space-xs);
     }
     
-    .mobile-actions { 
-        gap: 1.8rem; /* Увеличили */
+    /* ИСПРАВЛЕНИЕ БЛОКА СТАТЕЙ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
+    .blog-container {
+        padding: var(--space-xs);
+        margin: 0 auto;
+        max-width: calc(100% - 1rem);
+        border-radius: 0.75rem;
     }
     
-    .blog-hero { height: 12rem; }
-    .blog-hero-title { font-size: 2.5rem; }
-    .blog-hero-subtitle { font-size: 1.5rem; }
+    .section-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-sm);
+    }
     
-    .mobile-menu { width: 85%; }
+    .blog-list {
+        gap: 0.75rem;
+    }
+    
+    .blog-item-header {
+        padding: 0.75rem;
+        gap: 0.4rem;
+    }
+    
+    .blog-title {
+        font-size: 1.1rem;
+        width: calc(100% - 1.8rem);
+    }
+    
+    .blog-meta {
+        gap: 0.5rem;
+        font-size: 0.7rem;
+    }
+    
+    .blog-toggle {
+        right: 0.75rem;
+        top: 0.75rem;
+        font-size: 1.1rem;
+    }
+    
+    .blog-text,
+    .content-before-photo {
+        padding: 0.75rem;
+        font-size: 0.9rem;
+    }
     
     .blog-image {
-        height: 12.5rem;
+        height: 10rem;
     }
     
-    /* Дополнительные исправления для очень маленьких экранов */
-    .blog-section,
+    /* ИСПРАВЛЕНИЕ ФОРМЫ ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ */
     .callback-form-section {
         margin-left: var(--space-xs);
         margin-right: var(--space-xs);
         max-width: calc(100% - 1rem);
     }
     
-    /* Контейнер блога для очень маленьких экранов */
-    .blog-container {
-        padding: var(--space-xs);
-        border-radius: 0.75rem; /* Чуть меньше скругление */
-    }
-    
-    /* Элемент статьи для очень маленьких экранов */
-    .blog-item {
-        margin: 0 0 var(--space-sm) 0;
-        border-radius: 0.5rem; /* Чуть меньше скругление */
-    }
-    
-    .blog-list {
-        padding: 0;
-    }
-    
-    .blog-title {
-        font-size: 1.3rem;
-    }
-    
-    .blog-meta {
-        font-size: 0.8rem;
-    }
-    
-    /* Хедер статьи для очень маленьких экранов */
-    .blog-item-header {
-        padding: var(--space-xs) var(--space-sm);
-        border-radius: 0.5rem 0.5rem 0 0;
-    }
-    
-    /* Контент статьи для очень маленьких экранов */
-    .blog-text,
-    .content-before-photo {
-        padding: var(--space-sm);
-    }
-    
-    /* Форма обратной связи */
     .callback-form-container {
-        border-radius: 0.75rem; /* Чуть меньше скругление */
         padding: var(--space-sm);
+        border-radius: 0.75rem;
+    }
+    
+    .form-title {
+        font-size: 1.5rem;
+        margin-bottom: var(--space-md);
+    }
+    
+    .form-group input {
+        padding: 0.875rem var(--space-xs);
+        font-size: 0.95rem;
+    }
+    
+    .submit-btn {
+        padding: 0.875rem var(--space-sm);
+        font-size: 1rem;
+    }
+    
+    /* Мобильная шапка для очень маленьких экранов */
+    .mobile-logo .logo-placeholder {
+        width: 11rem;
+        height: 4rem;
+    }
+    
+    .mobile-callback {
+        font-size: 2.2rem;
+    }
+    
+    .burger-line {
+        width: 2.3rem;
+        height: 0.4rem;
+    }
+    
+    .mobile-left {
+        gap: 1.8rem;
+    }
+    
+    .mobile-actions {
+        gap: 1.8rem;
+    }
+    
+    .mobile-menu {
+        width: 85%;
+    }
+    
+    .mobile-logo .logo-placeholder {
+        width: 7.5rem;
+        height: 2.8125rem;
+        border-radius: 1.5rem;
     }
 }
 
@@ -1167,4 +1119,3 @@ footer {
     font-weight: bold;
     border-radius: 0.5rem;
 }
-
