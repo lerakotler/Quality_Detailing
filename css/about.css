@@ -765,7 +765,6 @@ footer {
   box-shadow: 0 0.375rem 1.25rem rgba(212, 175, 55, 0.5);
 }
 
-/* Адаптивность */
 @media (max-width: 48rem) {
     :root { font-size: 14px; }
 
@@ -774,22 +773,22 @@ footer {
     .header { display: none; }
     .mobile-header { display: flex; padding: 0.75rem 0; }
 
-    /* Логотип и кнопка звонка */
-    .mobile-logo .logo-placeholder { width: 12rem; height: 4.5rem; }
-    .mobile-callback { font-size: 3rem; }
+    /* Лого и иконка телефона — оставить размер десктопа */
+    .mobile-logo .logo-placeholder { width: 10rem; height: 3.75rem; }
+    .mobile-callback { font-size: 1.5rem; }
 
-    /* Бургер-меню */
-    .burger-menu { display: flex; flex-direction: column; gap: 0.35rem; }
-    .burger-line { width: 2.1rem; height: 0.3rem; background-color: var(--accent-gold); }
+    /* Бургер меню — только показываем */
+    .burger-menu { display: flex; flex-direction: column; gap: 0.25rem; }
+    .burger-line { width: 1.5625rem; height: 0.1875rem; background-color: var(--accent-gold); }
 
-    /* Герой-баннер */
-    .services-hero, .about-hero { height: 25rem; }
-    .hero-title, .about-hero-title { font-size: 3rem; }
-    .hero-subtitle, .about-hero-subtitle { font-size: 1.5rem; }
+    /* Герой баннер — не увеличивать */
+    .services-hero { height: 31rem; }
+    .hero-title { font-size: 3.5rem; }
+    .hero-subtitle { font-size: 1.5rem; }
 
     /* Сетки */
-    .portfolio-about-content, .company-info { grid-template-columns: 1fr; gap: var(--space-md); }
-    .about, .about-section { height: auto; min-height: 21.875rem; }
+    .portfolio-about-content { grid-template-columns: 1fr; gap: var(--space-md); }
+    .about { height: auto; min-height: 21.875rem; }
     .callback-form-container { padding: var(--space-md); }
 
     /* Футер */
@@ -800,8 +799,7 @@ footer {
     .services-hero,
     .advantages,
     .portfolio-about,
-    .callback-form-section,
-    .about-section {
+    .callback-form-section {
         margin-left: var(--space-sm);
         margin-right: var(--space-sm);
         max-width: calc(100% - 1.875rem);
@@ -814,18 +812,20 @@ footer {
 @media (max-width: 30rem) {
     :root { font-size: 12px; }
 
-    .services-hero, .about-hero { height: 22rem; }
-    .hero-title, .about-hero-title { font-size: 2.5rem; }
-    .hero-subtitle, .about-hero-subtitle { font-size: 1.25rem; }
+    .services-hero { height: 31rem; }
+    .hero-title { font-size: 3.5rem; }
+    .hero-subtitle { font-size: 1.5rem; }
 
-    .mobile-logo .logo-placeholder { width: 10rem; height: 3.5rem; }
-    .mobile-callback { font-size: 2.2rem; }
+    .mobile-logo .logo-placeholder { width: 8.75rem; height: 3.125rem; }
+    .mobile-callback { font-size: 1.25rem; }
 
-    .burger-line { width: 2.3rem; height: 0.4rem; }
+    .burger-line { width: 1.5625rem; height: 0.1875rem; }
 
     .mobile-menu { width: 85%; }
 
     .menu-items { gap: 1.5rem; }
     .menu-items a { font-size: 1.125rem; }
 }
+
+
 
