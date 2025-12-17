@@ -192,22 +192,31 @@
     </section>
 
     <!-- Форма обратного звонка -->
-    <section class="callback-form-section" id="callback-form">
-        <div class="container">
-            <div class="callback-form-container">
-                <h2 class="form-title">Заказать обратный звонок</h2>
-                <form class="callback-form" id="callbackForm">
-                    <div class="form-group">
-                        <input type="text" placeholder="Ваше имя" id="callbackName" required>
-                    </div>
-                    <div class="form-group">
-                        <input type="tel" placeholder="Ваш телефон" id="callbackPhone" required>
-                    </div>
-                    <button type="submit" class="submit-btn">Отправить</button>
-                </form>
+<!-- Разделитель перед формой -->
+<div class="form-divider"></div>
+
+<!-- Секция формы обратной связи -->
+<section class="callback-form-section">
+    <div class="container">
+        <div class="callback-form-container">
+            <h2 class="form-title">Оставить заявку</h2>
+            <form id="callback-form">
+                <div class="form-group">
+                    <input type="text" name="name" placeholder="Ваше имя" required>
+                    <div class="form-error" data-error="name"></div>
+                </div>
+                <div class="form-group">
+                    <input type="tel" name="phone" placeholder="Ваш телефон" required>
+                    <div class="form-error" data-error="phone"></div>
+                </div>
+                <button type="submit" class="submit-btn">Отправить заявку</button>
+            </form>
+            <div class="form-success" style="display: none;">
+                <i class="fas fa-check-circle"></i> Спасибо! Мы скоро вам перезвоним.
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <!-- РАЗДЕЛИТЕЛЬ ПЕРЕД ФУТЕРОМ -->
     <div class="footer-divider-top"></div>
