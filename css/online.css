@@ -660,28 +660,6 @@ footer {
         height: 12rem;
     }
 
-/* Герой баннер */
-.booking-hero {
-    background-color: var(--medium-gray);
-    border-radius: 0.9375rem;
-    margin: var(--space-lg) auto;
-    max-width: 75rem;
-    height: 18.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: 
-        linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(42, 42, 42, 0.7) 100%),
-        repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(212, 175, 55, 0.05) 0.625rem, rgba(212, 175, 55, 0.05) 1.25rem),
-        linear-gradient(135deg, var(--primary-dark) 0%, #3a3a3a 100%);
-}
-
-.booking-hero-content {
-    text-align: center;
-    z-index: 2;
-}
-
 /* Форма записи */
 .booking-form-section {
     padding-top: var(--space-md);    
@@ -1059,11 +1037,6 @@ footer {
 
 /* Адаптивность для online.css */
 @media (max-width: 48rem) {
-    .booking-hero {
-        height: 15rem;
-        margin: var(--space-md) auto;
-    }
-    
     .form-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
@@ -1089,11 +1062,6 @@ footer {
         padding: var(--space-md);
         margin-bottom: var(--space-xs);
     }
-    
-    footer {
-        padding: var(--space-xs) 0 var(--space-xs);
-        margin-top: 0;
-    }
 }
 
 @media (max-width: 30rem) {
@@ -1101,5 +1069,3 @@ footer {
         height: 12rem;
     }
 }
-
-
