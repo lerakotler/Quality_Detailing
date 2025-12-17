@@ -605,7 +605,9 @@ footer {
     .mobile-menu {
         width: 85%;
     }
-}/* Герой баннер для страницы "О нас" */
+}
+    
+/* Герой баннер для страницы "О нас" */
 .about-hero {
     background-color: var(--medium-gray);
     border-radius: 0.9375rem;
@@ -940,4 +942,5 @@ footer {
         min-height: 15rem;
     }
 }
+
 
