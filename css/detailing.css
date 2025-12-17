@@ -660,31 +660,10 @@ footer {
         height: 12rem;
     }
     
-/* Герой баннер */
+/* ОСОБЫЙ БАННЕР ДЛЯ ГЛАВНОЙ - ВЫШЕ И С КНОПКОЙ */
 .services-hero {
-    background-color: var(--medium-gray);
-    position: relative;
-    border-radius: 0.9375rem;
+    height: 31rem; /* ВЫШЕ, ЧЕМ НА ДРУГИХ СТРАНИЦАХ */
     margin: var(--space-md) auto;
-    max-width: 75rem;
-    height: 31rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: 
-      linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(42, 42, 42, 0.7) 100%),
-      repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(212, 175, 55, 0.05) 0.625rem, rgba(212, 175, 55, 0.05) 1.25rem),
-      linear-gradient(135deg, var(--primary-dark) 0%, #3a3a3a 100%);
-}
-
-.hero-banner-content {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
 }
 
 /* Кнопка на баннере */
@@ -704,6 +683,7 @@ footer {
     transition: all 0.3s ease;
     box-shadow: 0 0.5rem 1.5rem rgba(212, 175, 55, 0.3);
     border: 0.125rem solid transparent;
+    margin-top: var(--space-lg);
 }
 
 .booking-btn-banner:hover {
@@ -1097,7 +1077,6 @@ footer {
 @media (max-width: 48rem) {
     .services-hero {
         height: 25rem;
-        margin: var(--space-md) auto;
     }
     
     .portfolio-about-content {
@@ -1128,14 +1107,4 @@ footer {
     .services-hero {
         height: 21.875rem;
     }
-    
-    .menu-items {
-        gap: 1.5rem;
-    }
-    
-    .menu-items a {
-        font-size: 1.125rem;
-    }
 }
-
-
