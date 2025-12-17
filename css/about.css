@@ -636,53 +636,7 @@ footer {
     .section-title {
         font-size: 1.75rem;
     }
-    
-    /* УВЕЛИЧЕННАЯ МОБИЛЬНАЯ ШАПКА - МАЛЕНЬКИЕ ЭКРАНЫ */
-    .mobile-logo .logo-placeholder {
-        width: 10rem;
-        height: 3.5rem;
-    }
-    
-    .mobile-callback {
-        font-size: 1.5rem;
-    }
-    
-    .burger-line {
-        width: 1.75rem;
-        height: 0.22rem;
-    }
-    
-    .mobile-menu {
-        width: 85%;
-    }
-    
-    .page-hero {
-        height: 12rem;
-    }
 }
-    
-/* Герой баннер для страницы "О нас" */
-.about-hero {
-    background-color: var(--medium-gray);
-    border-radius: 0.9375rem;
-    margin: var(--space-lg) auto;
-    max-width: 75rem;
-    height: 18.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: 
-        linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(42, 42, 42, 0.7) 100%),
-        repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(212, 175, 55, 0.05) 0.625rem, rgba(212, 175, 55, 0.05) 1.25rem),
-        linear-gradient(135deg, var(--primary-dark) 0%, #3a3a3a 100%);
-}
-
-.about-hero-content {
-    text-align: center;
-    z-index: 2;
-}
-
 /* Секция "О нас" */
 .about-section {
     padding: 0.75rem 0;
@@ -727,7 +681,7 @@ footer {
     font-size: 1.125rem;
 }
 
-/* ФОТОГРАФИЯ КОМПАНИИ - ИСПРАВЛЕННЫЙ КОД */
+/* ФОТОГРАФИЯ КОМПАНИИ */
 .company-image {
     background-color: var(--medium-gray);
     border-radius: 0.625rem;
@@ -840,7 +794,7 @@ footer {
     box-shadow: 0 0.625rem 1.25rem rgba(0,0,0,0.15);
 }
 
-/* ФОТОГРАФИИ СОТРУДНИКОВ - ИСПРАВЛЕННЫЙ КОД */
+/* ФОТОГРАФИИ СОТРУДНИКОВ */
 .member-photo {
     height: 22rem;
     background-color: var(--medium-gray);
@@ -960,10 +914,6 @@ footer {
 
 /* Адаптивность для about.css */
 @media (max-width: 48rem) {
-    .about-hero {
-        height: 15rem;
-    }
-    
     .company-info {
         grid-template-columns: 1fr;
         gap: var(--space-md);
@@ -988,15 +938,7 @@ footer {
 }
 
 @media (max-width: 30rem) {
-    .about-hero {
-        height: 12rem;
-    }
-    
     .company-image {
         min-height: 15rem;
     }
 }
-
-
-
-
