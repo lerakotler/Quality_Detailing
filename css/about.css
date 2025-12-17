@@ -128,4 +128,525 @@ body {
 
 .mobile-callback { 
     color: var(--accent-gold); 
-    font-size: 1.75rem;
+    font-size: 1.75rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 2.5rem;
+    height: 2.5rem;
+}
+
+.mobile-callback:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+/* МЕНЮ ДЛЯ ДЕСКТОПА */
+.top-menu { 
+    background-color: var(--primary-dark); 
+    padding: var(--space-xs) 0; 
+}
+
+.menu-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    max-width: 68.75rem; 
+    margin: 0 auto;
+    position: relative;
+}
+
+.callback-icon { 
+    color: var(--accent-gold); 
+    font-size: 1.75rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0;
+}
+
+.callback-icon:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.menu-items { 
+    display: flex; 
+    gap: 2.5rem; 
+    list-style: none;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.menu-items a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    transition: all 0.3s ease; 
+    transform-origin: center; 
+    position: relative; 
+    padding: 0.5rem 0;
+    display: inline-block;
+}
+
+.menu-items a:hover {
+    color: var(--accent-gold);
+    transform: scale(1.05);
+}
+
+.menu-items a.active {
+    color: var(--accent-gold);
+}
+
+.menu-items a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--accent-gold);
+}
+
+/* МОБИЛЬНОЕ МЕНЮ */
+.mobile-menu-overlay { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.7); 
+    z-index: 999; 
+    backdrop-filter: blur(3px);
+}
+
+.mobile-menu-overlay.active { 
+    display: block; 
+}
+
+.mobile-menu { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    width: 85%; 
+    max-width: 25rem;
+    height: 100%; 
+    background-color: var(--primary-dark); 
+    z-index: 1000; 
+    flex-direction: column; 
+    padding: 5rem 2rem 2rem; 
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -0.3125rem 0 1.5rem rgba(0, 0, 0, 0.4);
+    overflow-y: auto;
+}
+
+.mobile-menu.active { 
+    display: flex; 
+    transform: translateX(0); 
+}
+
+.mobile-menu-items { 
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1rem; 
+    padding: 0;
+    margin: 0;
+}
+
+.mobile-menu-items a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    padding: 1.125rem 1rem; 
+    border-bottom: 0.0625rem solid rgba(255, 255, 255, 0.1); 
+    display: block; 
+    transition: all 0.3s ease; 
+    border-radius: 0.5rem;
+}
+
+.mobile-menu-items a:hover {
+    color: var(--accent-gold);
+    background-color: rgba(212, 175, 55, 0.1);
+    transform: translateX(0.5rem);
+}
+
+.mobile-menu-items a.active {
+    color: var(--accent-gold);
+    background-color: rgba(212, 175, 55, 0.1);
+}
+
+.mobile-menu-items a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--accent-gold);
+}
+
+.close-menu { 
+    position: absolute; 
+    top: 1.5rem; 
+    right: 1.5rem; 
+    color: var(--accent-gold); 
+    font-size: 2rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background: none;
+    border: none;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1001;
+}
+
+.close-menu:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.menu-divider { 
+    height: 0.125rem; 
+    background: linear-gradient(90deg, transparent 0%, var(--accent-gold) 20%, var(--accent-gold) 80%, transparent 100%); 
+    margin: 0.5rem auto var(--space-md); 
+    max-width: 68.75rem; 
+}
+
+/* Стили для страницы "О нас"... */
+
+/* АДАПТАЦИЯ */
+@media (max-width: 1024px) {
+    .container {
+        padding: 0 1.5rem;
+    }
+    
+    .menu-items {
+        gap: 2rem;
+    }
+    
+    .menu-items a {
+        font-size: 1.125rem;
+    }
+    
+    .about-hero-title {
+        font-size: 3rem;
+    }
+}
+
+@media (max-width: 768px) {
+    :root {
+        font-size: 15px;
+    }
+    
+    .top-menu {
+        display: none;
+    }
+    
+    .header {
+        display: none;
+    }
+    
+    .mobile-header {
+        display: block;
+        padding: 0.75rem 0;
+    }
+    
+    .burger-menu {
+        display: flex;
+    }
+    
+    .mobile-logo .logo-placeholder {
+        width: 10rem;
+        height: 3.5rem;
+        min-width: 10rem;
+    }
+    
+    .mobile-callback {
+        font-size: 1.625rem;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+    .burger-line {
+        width: 1.75rem;
+        height: 0.225rem;
+    }
+    
+    .mobile-menu {
+        width: 85%;
+        padding: 4.5rem 1.5rem 1.5rem;
+    }
+    
+    .mobile-menu-items a {
+        font-size: 1.375rem;
+        padding: 1rem 0.875rem;
+    }
+    
+    .close-menu {
+        top: 1.25rem;
+        right: 1.25rem;
+        font-size: 1.75rem;
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    
+    .container {
+        padding: 0 1.25rem;
+    }
+    
+    /* Страница "О нас" для мобильных */
+    .about-hero {
+        height: 14rem;
+        margin: 1rem auto;
+        border-radius: 0.75rem;
+    }
+    
+    .about-hero-title {
+        font-size: 2rem;
+        margin-bottom: 0.5rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1.125rem;
+    }
+    
+    .about-container {
+        padding: 1.25rem;
+        border-radius: 0.75rem;
+    }
+    
+    .company-info {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+    
+    .company-image {
+        min-height: 16rem;
+        order: -1;
+    }
+    
+    .values-grid,
+    .team-grid,
+    .achievements-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+    
+    .value-card,
+    .team-member,
+    .achievement-item {
+        padding: 1.25rem;
+    }
+    
+    .member-photo {
+        height: 18rem;
+    }
+    
+    .booking-button {
+        padding: 0.875rem 1.5rem;
+        font-size: 1.125rem;
+    }
+    
+    .footer-row {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+        padding: 0 1rem;
+    }
+    
+    .back-to-top {
+        bottom: 1rem;
+        right: 1rem;
+        width: 3rem;
+        height: 3rem;
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    :root {
+        font-size: 14px;
+    }
+    
+    .mobile-header {
+        padding: 0.625rem 0;
+    }
+    
+    .mobile-top-bar {
+        min-height: 3.5rem;
+    }
+    
+    .mobile-logo .logo-placeholder {
+        width: 9rem;
+        height: 3rem;
+        min-width: 9rem;
+    }
+    
+    .mobile-callback {
+        font-size: 1.5rem;
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .burger-menu {
+        gap: 0.3rem;
+        padding: 0.375rem;
+    }
+    
+    .burger-line {
+        width: 1.5rem;
+        height: 0.2rem;
+    }
+    
+    .mobile-menu {
+        width: 90%;
+        padding: 4rem 1.25rem 1.25rem;
+    }
+    
+    .mobile-menu-items a {
+        font-size: 1.25rem;
+        padding: 0.875rem 0.75rem;
+    }
+    
+    .close-menu {
+        top: 1rem;
+        right: 1rem;
+        font-size: 1.5rem;
+        width: 2.25rem;
+        height: 2.25rem;
+    }
+    
+    .container {
+        padding: 0 1rem;
+    }
+    
+    /* Страница "О нас" для маленьких экранов */
+    .about-hero {
+        height: 12rem;
+        margin: 0.75rem auto;
+    }
+    
+    .about-hero-title {
+        font-size: 1.75rem;
+        padding: 0 0.5rem;
+    }
+    
+    .about-hero-subtitle {
+        font-size: 1rem;
+        padding: 0 0.5rem;
+    }
+    
+    .about-container {
+        padding: 1rem;
+    }
+    
+    .company-image {
+        min-height: 14rem;
+    }
+    
+    .company-text h3 {
+        font-size: 1.5rem;
+    }
+    
+    .company-text p {
+        font-size: 1rem;
+    }
+    
+    .value-card,
+    .team-member,
+    .achievement-item {
+        padding: 1rem;
+    }
+    
+    .value-icon {
+        width: 4rem;
+        height: 4rem;
+        font-size: 1.5rem;
+    }
+    
+    .member-photo {
+        height: 16rem;
+    }
+    
+    .member-name {
+        font-size: 1.25rem;
+    }
+    
+    .member-description {
+        font-size: 0.9375rem;
+    }
+    
+    .achievement-number {
+        font-size: 2rem;
+    }
+    
+    .booking-button {
+        padding: 0.75rem 1.25rem;
+        font-size: 1rem;
+    }
+    
+    .footer-row a {
+        font-size: 1rem;
+    }
+    
+    .social-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.125rem;
+    }
+    
+    .back-to-top {
+        width: 2.75rem;
+        height: 2.75rem;
+        font-size: 1.375rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .mobile-logo .logo-placeholder {
+        width: 8rem;
+        height: 2.75rem;
+        min-width: 8rem;
+    }
+    
+    .burger-line {
+        width: 1.375rem;
+    }
+    
+    .mobile-callback {
+        font-size: 1.375rem;
+    }
+    
+    .mobile-menu-items a {
+        font-size: 1.125rem;
+        padding: 0.75rem 0.625rem;
+    }
+    
+    .close-menu {
+        width: 2rem;
+        height: 2rem;
+    }
+    
+    .about-hero-title {
+        font-size: 1.5rem;
+    }
+    
+    .company-image {
+        min-height: 12rem;
+    }
+    
+    .member-photo {
+        height: 14rem;
+    }
+}
