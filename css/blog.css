@@ -1188,4 +1188,12 @@ footer {
     }
     
     .callback-form-container {
-        border-radius: 0.625rem !important; /* Уменьшено с 
+        border-radius: 0.625rem !important; /* Уменьшено с 0.75rem */
+        padding: var(--space-sm) !important; /* Уменьшено с var(--space-sm) */
+        margin: 0 0.5rem !important;
+    }
+    
+    .form-title {
+        font-size: 1.75rem !important;
+    }
+}
