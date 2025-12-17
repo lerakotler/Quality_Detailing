@@ -532,27 +532,22 @@ body {
     border: none;
 }
 
-/* Форма обратной связи - КАК НА ГЛАВНОЙ */
+/* Форма обратной связи КАК НА ГЛАВНОЙ СТРАНИЦЕ */
 .callback-form-section {
-    padding: var(--space-sm) 0; /* Уменьшили с var(--space-md) */
-    margin: var(--space-xs) auto; /* Уменьшили с var(--space-sm) */
-    padding-top: 0 !important; /* Уменьшаем отступ над формой */
+    padding: var(--space-md) 0;
+    margin: var(--space-sm) auto;
     max-width: 43.75rem;
 }
 
 .callback-form-container {
-    background-color: var(--white);
+    background-color: var(--light-bg);
     padding: var(--space-xl);
     border-radius: 0.9375rem;
     transition: all 0.3s ease;
-    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
-    border: 1px solid #e0e0e0;
 }
 
 .callback-form-container:hover {
     transform: translateY(-0.3125rem);
-    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
-    border-color: var(--accent-gold);
 }
 
 .form-title {
@@ -566,7 +561,6 @@ body {
 
 .form-title:hover {
     transform: scale(1.02);
-    color: var(--accent-gold);
 }
 
 .form-group {
@@ -577,7 +571,7 @@ body {
 .form-group input {
     width: 100%;
     padding: 1.125rem var(--space-md);
-    background-color: #f9f9f9;
+    background-color: var(--white);
     border: 0.125rem solid var(--accent-gold);
     color: #000000;
     font-size: 1.125rem;
@@ -591,7 +585,7 @@ body {
     box-shadow: 0 0 0.625rem rgba(212, 175, 55, 0.5);
     outline: none;
     transform: scale(1.02);
-    background-color: #ffffff;
+    background-color: #fbfbfb;
 }
 
 .form-group input::placeholder {
@@ -612,14 +606,104 @@ body {
     border-radius: 0.5rem;
     transition: all 0.3s ease;
     margin-top: var(--space-sm);
-    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
 }
 
 .submit-btn:hover {
     background-color: #000000;
     color: var(--accent-gold);
     transform: scale(1.02);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Стили для формы обратной связи */
+.form-error {
+    color: #ff4444;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    text-align: left;
+    animation: fadeInUp 0.3s ease;
+}
+
+.form-success {
+    background-color: #4CAF50;
+    color: white;
+    padding: var(--space-sm) var(--space-md);
+    border-radius: 0.5rem;
+    text-align: center;
+    margin-top: var(--space-md);
+    font-weight: 600;
+    animation: fadeInUp 0.3s ease;
+}
+
+.form-success i {
+    margin-right: 0.5rem;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация для кнопки отправки */
+.submit-btn:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+/* АДАПТИВНОСТЬ ФОРМЫ */
+@media (max-width: 48rem) {
+    .callback-form-section {
+        padding: var(--space-sm) 0;
+        margin: var(--space-xs) auto;
+    }
+    
+    .callback-form-container {
+        padding: var(--space-md);
+        margin: 0 var(--space-sm);
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+    }
+    
+    .form-title {
+        font-size: 2rem;
+    }
+    
+    .form-group input {
+        padding: 1rem var(--space-sm);
+        font-size: 1rem;
+    }
+    
+    .submit-btn {
+        padding: 1rem 2rem;
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 30rem) {
+    .callback-form-section {
+        padding: var(--space-xs) 0;
+    }
+    
+    .callback-form-container {
+        padding: var(--space-sm);
+        margin: 0 var(--space-xs);
+        width: calc(100% - 1rem);
+        max-width: calc(100% - 1rem);
+    }
+    
+    .form-title {
+        font-size: 1.75rem;
+    }
+    
+    .submit-btn {
+        padding: 0.875rem;
+        font-size: 1.125rem;
+    }
 }
 
 /* РАЗДЕЛИТЕЛЬ ПЕРЕД ФУТЕРОМ */
@@ -1237,3 +1321,4 @@ footer {
     }
 
 }
+
