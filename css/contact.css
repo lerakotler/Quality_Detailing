@@ -819,24 +819,9 @@ footer {
         display: flex; 
     }
     
-    /* ГЕРОЙ БАННЕР */
-    .contacts-hero { 
-        height: 15rem;
-        margin: var(--space-md) auto;
-        max-width: calc(100% - 2rem);
-        width: calc(100% - 2rem);
-        padding: 0;
-    }
-    
-    .contacts-hero-title { 
-        font-size: 2.5rem; 
-        padding: 0 var(--space-sm);
-    }
-    
-    .contacts-hero-subtitle { 
-        font-size: 1.25rem; 
-        padding: 0 var(--space-sm);
-    }
+    .contacts-hero { height: 15rem; }
+    .contacts-hero-title { font-size: 2.5rem; }
+    .contacts-hero-subtitle { font-size: 1.25rem; }
     
     /* СЕКЦИЯ КОНТАКТОВ */
     .contacts-section {
@@ -990,21 +975,8 @@ footer {
         font-size: 1.75rem;
     }
     
-    /* ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 8rem; 
-        height: 3rem; 
-    }
-    
-    /* МОБИЛЬНОЕ МЕНЮ */
-    .mobile-menu {
-        width: 80%;
-    }
-    
-    .mobile-menu-items a {
-        font-size: 1.25rem;
-        padding: 0.875rem 0;
-    }
+    .mobile-logo .logo-placeholder { width: 8.75rem; height: 3.125rem; }
+
 }
 
 /* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ (менее 480px) */
@@ -1013,21 +985,9 @@ footer {
         font-size: 12px; 
     }
     
-    .contacts-hero { 
-        height: 12rem;
-        margin: var(--space-sm) auto;
-        max-width: calc(100% - 1rem);
-        width: calc(100% - 1rem);
-    }
-    
-    .contacts-hero-title { 
-        font-size: 1.75rem; 
-    }
-    
-    .contacts-hero-subtitle { 
-        font-size: 0.875rem; 
-    }
-    
+    .contacts-hero { height: 12rem; }
+    .contacts-hero-title { font-size: 2rem; }
+    .contacts-hero-subtitle { font-size: 1rem; }
     /* КОНТЕЙНЕР КОНТАКТОВ */
     .contacts-container {
         padding: var(--space-sm);
@@ -1106,42 +1066,13 @@ footer {
         font-size: 1.125rem;
     }
     
-    /* ЛОГОТИП */
-    .mobile-logo .logo-placeholder { 
-        width: 6.5rem; 
-        height: 2.5rem; 
-    }
-    
-    /* МОБИЛЬНОЕ МЕНЮ */
-    .mobile-menu {
-        width: 85%;
-        padding: 3rem var(--space-sm) var(--space-md);
-    }
-    
-    .mobile-menu-items a {
-        font-size: 1.125rem;
-    }
+    .mobile-logo .logo-placeholder { width: 7.5rem; height: 2.8125rem; }
+
     
     /* СОЦИАЛЬНЫЕ ИКОНКИ */
     .social-icon {
         width: 2.5rem;
         height: 2.5rem;
-        font-size: 1.125rem;
-    }
-    
-    /* СТРЕЛКА НАВЕРХ */
-    .back-to-top {
-        width: 2.5rem;
-        height: 2.5rem;
-        font-size: 1.5rem;
-    }
-    
-    /* ФУТЕР */
-    .footer-row a {
-        font-size: 1rem;
-    }
-    
-    .footer-bottom {
         font-size: 1.125rem;
     }
 }
@@ -1204,3 +1135,4 @@ footer {
     }
 
 }
+
