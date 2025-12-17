@@ -659,28 +659,13 @@ footer {
     .page-hero {
         height: 12rem;
     }
-
-    /* Герой баннер для контактов */
-.contacts-hero {
-    background-color: var(--medium-gray);
-    border-radius: 0.9375rem;
-    margin: var(--space-lg) auto;
-    max-width: 75rem;
-    height: 18.75rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    background: 
-        linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(42, 42, 42, 0.7) 100%),
-        repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(212, 175, 55, 0.05) 0.625rem, rgba(212, 175, 55, 0.05) 1.25rem),
-        repeating-linear-gradient(-45deg, transparent, transparent 0.625rem, rgba(212, 175, 55, 0.03) 0.625rem, rgba(212, 175, 55, 0.03) 1.25rem),
-        linear-gradient(135deg, var(--primary-dark) 0%, #3a3a3a 100%);
 }
 
-.contacts-hero-content {
-    text-align: center;
-    z-index: 2;
+/* Секция контактов */
+.contacts-section {
+    padding: var(--space-md) 0;
+    margin: var(--space-sm) auto;
+    max-width: 75rem;
 }
 
 /* НАДПИСЬ "НАШИ КОНТАКТЫ" - БЕЛАЯ */
@@ -1006,28 +991,10 @@ footer {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
-/* Адаптивность для contact.css - ИСПРАВЛЕННЫЙ ВАРИАНТ */
+/* Адаптивность для contact.css */
 @media (max-width: 48rem) {
-    .contacts-hero { 
-        height: 15rem;
-        margin: var(--space-md) auto;
-        max-width: calc(100% - 2rem);
-        width: calc(100% - 2rem);
-        padding: 0;
-    }
-    
-    .contacts-hero-title { 
-        font-size: 2.5rem; /* УВЕЛИЧЕНО С 2.5rem ДО НОРМАЛЬНОГО РАЗМЕРА */
-        padding: 0 var(--space-sm);
-    }
-    
-    .contacts-hero-subtitle { 
-        font-size: 1.25rem; /* УВЕЛИЧЕНО С 1.25rem ДО НОРМАЛЬНОГО РАЗМЕРА */
-        padding: 0 var(--space-sm);
-    }
-    
     .contacts-section {
-        padding: var(--space-md) 0; /* УВЕЛИЧЕНО С var(--space-sm) */
+        padding: var(--space-md) 0;
         margin: 0 auto;
         max-width: 100%;
         width: 100%;
@@ -1035,13 +1002,13 @@ footer {
     
     .contacts-title,
     .section-title {
-        font-size: 2.375rem; /* УВЕЛИЧЕНО С 2rem */
-        margin-bottom: var(--space-lg); /* УВЕЛИЧЕНО С var(--space-md) */
+        font-size: 2.375rem;
+        margin-bottom: var(--space-lg);
         padding: 0 var(--space-sm);
     }
     
     .contacts-container {
-        padding: var(--space-lg); /* УВЕЛИЧЕНО С var(--space-md) */
+        padding: var(--space-lg);
         margin: 0 var(--space-sm) var(--space-md);
         width: calc(100% - 2rem);
         max-width: calc(100% - 2rem);
@@ -1057,25 +1024,25 @@ footer {
     }
     
     .contact-card {
-        padding: var(--space-lg); /* УВЕЛИЧЕНО С var(--space-md) */
+        padding: var(--space-lg);
         margin: 0;
         width: 100%;
         border-radius: 0.625rem;
     }
     
     .contact-title {
-        font-size: 1.5rem; /* УВЕЛИЧЕНО С 1.25rem */
+        font-size: 1.5rem;
     }
     
     .contact-info {
-        font-size: 1.125rem; /* УВЕЛИЧЕНО С 1rem */
+        font-size: 1.125rem;
     }
     
     /* СЕТКА ЧАСОВ РАБОТЫ */
     .hours-grid {
         grid-template-columns: repeat(2, 1fr);
-        gap: var(--space-md); /* УВЕЛИЧЕНО С var(--space-sm) */
-        padding: var(--space-lg); /* УВЕЛИЧЕНО С var(--space-md) */
+        gap: var(--space-md);
+        padding: var(--space-lg);
         margin-bottom: var(--space-xl);
         width: 100%;
         max-width: 100%;
@@ -1094,22 +1061,22 @@ footer {
         grid-row: 4;
         justify-self: stretch;
         width: auto;
-        margin-top: var(--space-md); /* УВЕЛИЧЕНО С var(--space-sm) */
+        margin-top: var(--space-md);
         min-width: unset;
     }
     
     .day-block {
-        padding: var(--space-md); /* УВЕЛИЧЕНО С var(--space-sm) */
+        padding: var(--space-md);
         text-align: center;
         min-height: auto;
     }
     
     .day-name {
-        font-size: 1.25rem; /* УВЕЛИЧЕНО С 1.1rem */
+        font-size: 1.25rem;
     }
     
     .day-hours {
-        font-size: 1.125rem; /* УВЕЛИЧЕНО С 1rem */
+        font-size: 1.125rem;
     }
     
     /* КАРТА */
@@ -1124,14 +1091,14 @@ footer {
     
     /* ФОРМА ОБРАТНОЙ СВЯЗИ */
     .callback-form-section {
-        padding: var(--space-md) 0; /* УВЕЛИЧЕНО С 0 0 var(--space-sm) 0 */
+        padding: var(--space-md) 0;
         margin: 0 auto;
         max-width: 100%;
         width: 100%;
     }
     
     .callback-form-container {
-        padding: var(--space-lg); /* УВЕЛИЧЕНО С var(--space-md) */
+        padding: var(--space-lg);
         margin: 0 var(--space-sm);
         width: calc(100% - 2rem);
         max-width: calc(100% - 2rem);
@@ -1139,49 +1106,40 @@ footer {
     }
     
     .form-title {
-        font-size: 2.375rem; /* УВЕЛИЧЕНО С 2rem */
+        font-size: 2.375rem;
         padding: 0 var(--space-xs);
     }
     
     .form-group input {
-        padding: 1.125rem var(--space-md); /* УВЕЛИЧЕНО С 1rem var(--space-sm) */
-        font-size: 1.125rem; /* УВЕЛИЧЕНО С 1rem */
+        padding: 1.125rem var(--space-md);
+        font-size: 1.125rem;
     }
     
     .submit-btn {
-        padding: 1.125rem 2.5rem; /* УВЕЛИЧЕНО */
-        font-size: 1.25rem; /* УВЕЛИЧЕНО */
+        padding: 1.125rem 2.5rem;
+        font-size: 1.25rem;
+    }
+    
+    .menu-divider,
+    .footer-divider-top {
+        margin-left: var(--space-sm);
+        margin-right: var(--space-sm);
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
     }
 }
 
-/* ДЛЯ ОЧЕНЬ МАЛЕНЬКИХ ЭКРАНОВ - УПРОЩЕННЫЙ ВАРИАНТ */
 @media (max-width: 30rem) {
-    .contacts-hero { 
-        height: 12rem;
-        margin: var(--space-md) auto; /* УВЕЛИЧЕНО С var(--space-sm) */
-        max-width: calc(100% - 1rem);
-        width: calc(100% - 1rem);
-    }
-    
-    .contacts-hero-title { 
-        font-size: 2rem; /* УВЕЛИЧЕНО С 1.75rem */
-    }
-    
-    .contacts-hero-subtitle { 
-        font-size: 1rem; /* УВЕЛИЧЕНО С 0.875rem */
-    }
-    
     .contacts-title,
     .section-title {
-        font-size: 2rem; /* УВЕЛИЧЕНО С 1.75rem */
+        font-size: 2rem;
     }
     
     .day-name {
-        font-size: 1.125rem; /* УВЕЛИЧЕНО С 1rem */
+        font-size: 1.125rem;
     }
     
     .day-hours {
-        font-size: 1rem; /* УВЕЛИЧЕНО С 0.875rem */
+        font-size: 1rem;
     }
 }
-
