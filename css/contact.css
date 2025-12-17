@@ -1,9 +1,8 @@
-/* Герой баннер для страницы услуг */
-.services-hero {
+/* Герой баннер для контактов */
+.contacts-hero {
     background-color: var(--medium-gray);
-    position: relative;
     border-radius: 0.9375rem;
-    margin: var(--space-lg) auto -2rem;
+    margin: var(--space-lg) auto;
     max-width: 75rem;
     height: 18.75rem;
     display: flex;
@@ -17,323 +16,655 @@
         linear-gradient(135deg, var(--primary-dark) 0%, #3a3a3a 100%);
 }
 
-.services-hero-content {
+.contacts-hero-content {
     text-align: center;
     z-index: 2;
 }
 
-/* Категории услуг */
-.services-categories {
-    padding: var(--space-xl) 0;
-    margin: var(--space-md) auto var(--space-xs);
+/* Секция контактов */
+.contacts-section {
+    padding: var(--space-md) 0;
+    margin: var(--space-sm) auto;
     max-width: 75rem;
 }
 
-.categories-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    gap: var(--space-lg);
-    max-width: 68.75rem;
-    margin: 0 auto;
-}
-
-.category-card {
-    background: linear-gradient(135deg, var(--light-bg) 0%, #e8e8e8 100%);
-    padding: var(--space-xl);
-    border-radius: 1rem;
-    text-align: center;
-    transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    cursor: pointer;
-    border: 0.125rem solid transparent;
-    position: relative;
-    overflow: hidden;
-}
-
-.category-card::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 100%;
-    background: linear-gradient(90deg, transparent, rgba(212, 175, 55, 0.1), transparent);
-    transition: left 0.6s ease;
-}
-
-.category-card:hover::before {
-    left: 100%;
-}
-
-.category-card:hover {
-    transform: translateY(-0.625rem) scale(1.03);
-    border-color: var(--accent-gold);
-    box-shadow: 0 1.25rem 2.5rem rgba(212, 175, 55, 0.2);
-}
-
-.category-icon {
-    width: 5rem;
-    height: 5rem;
-    background-color: var(--accent-gold);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto var(--space-md);
-    color: #000000;
-    font-size: 2rem;
-    transition: all 0.3s ease;
-}
-
-.category-card:hover .category-icon {
-    transform: scale(1.1) rotate(5deg);
-    background-color: #000000;
-    color: var(--accent-gold);
-}
-
-.category-title {
+/* НАДПИСЬ "НАШИ КОНТАКТЫ" - БЕЛАЯ */
+.contacts-title {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 1.75rem;
-    color: #000000;
-    margin-bottom: var(--space-sm);
-    font-weight: 700;
+    font-size: 2.375rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+    color: var(--white);
     transition: all 0.3s ease;
 }
 
-.category-card:hover .category-title {
+.contacts-title:hover {
+    transform: scale(1.02);
     color: var(--accent-gold);
 }
 
-.category-description {
-    color: #666;
-    font-size: 1.125rem;
-    line-height: 1.5;
+/* Остальные заголовки остаются черными */
+.section-title {
+    color: #000000;
+}
+
+.section-title:hover {
+    color: var(--accent-gold);
+}
+
+.contacts-container {
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: 0.9375rem;
+    margin-bottom: var(--space-sm);
+}
+
+/* Карточки контактов */
+.contacts-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: var(--space-lg);
+    margin-bottom: var(--space-xl);
+}
+
+.contact-card {
+    background: var(--white);
+    border-radius: 0.625rem;
+    padding: var(--space-lg);
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+    text-align: center;
+    border: 1px solid #e0e0e0;
+}
+
+.contact-card:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    border-color: var(--accent-gold);
+}
+
+.contact-icon {
+    font-size: 2.5rem;
+    color: var(--accent-gold);
     margin-bottom: var(--space-md);
 }
 
-.category-link {
-    color: var(--accent-gold);
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 1.125rem;
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: all 0.3s ease;
-}
-
-.category-link:hover {
-    color: #000000;
-    transform: translateX(0.5rem);
-}
-
-/* Кнопка записи онлайн */
-.booking-button-section {
-    text-align: center;
-    margin: 0;
-    padding: var(--space-sm) 0;
-}
-
-/* Таблицы с ценами */
-.pricing-tables {
-    padding: var(--space-xl) 0;
-    margin: auto;
-    max-width: 75rem;
-    padding-bottom: var(--space-lg);
-}
-
-.pricing-section {
-    margin-bottom: 3rem;
-    scroll-margin-top: 2rem;
-}
-
-.pricing-title {
+.contact-title {
     font-family: 'Roboto Condensed', sans-serif;
-    font-size: 2.25rem;
-    color: var(--accent-gold);
-    margin-bottom: var(--space-lg);
-    text-align: center;
-    padding-bottom: var(--space-sm);
-    border-bottom: 0.125rem solid var(--accent-gold);
-}
-
-.category-info {
-    background: var(--light-bg);
-    padding: var(--space-lg);
-    border-radius: 0.9375rem;
-    margin-bottom: var(--space-lg);
-}
-
-.category-info h3 {
-    color: #000000;
     font-size: 1.5rem;
+    color: #000000;
     margin-bottom: var(--space-sm);
     font-weight: 700;
 }
 
-.category-info p {
-    color: #666;
+.contact-info {
+    color: #333;
     font-size: 1.125rem;
     line-height: 1.6;
+    margin-bottom: var(--space-sm);
 }
 
-.pricing-table {
-    width: 100%;
-    background: var(--light-bg);
-    border-radius: 0.9375rem;
-    overflow: hidden;
-    box-shadow: 0 0.5rem 1.5rem rgba(0,0,0,0.1);
-}
-
-.table-header {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    background: var(--accent-gold);
-    color: #000000;
-    font-weight: 700;
-    padding: var(--space-md);
-    text-align: center;
-}
-
-.table-header div {
-    padding: var(--space-sm);
-    font-size: 1.125rem;
-}
-
-.table-row {
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
-    border-bottom: 0.0625rem solid #e0e0e0;
+.contact-link {
+    color: var(--accent-gold);
+    text-decoration: none;
+    font-weight: 600;
     transition: all 0.3s ease;
 }
 
-.table-row:hover {
-    background: #f8f8f8;
-    transform: scale(1.01);
+.contact-link:hover {
+    color: #000000;
+    text-decoration: underline;
 }
 
-.pricing-section:last-child {
-    margin-bottom: -2rem;
+/* Часы работы - ОБНОВЛЕННАЯ СЕТКА С ТЕНЯМИ И РАМКОЙ */
+.hours-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: var(--space-sm);
+    background: var(--white);
+    padding: var(--space-lg);
+    border-radius: 0.9375rem;
+    margin-bottom: var(--space-xl);
+    position: relative;
+    border: 2px solid var(--accent-gold);
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
 }
 
-.table-row div {
-    padding: var(--space-md) var(--space-sm);
+/* Понедельник-Пятница */
+.day-block:nth-child(1) { grid-column: 1; grid-row: 1; }
+.day-block:nth-child(2) { grid-column: 2; grid-row: 1; }
+.day-block:nth-child(3) { grid-column: 3; grid-row: 1; }
+.day-block:nth-child(4) { grid-column: 4; grid-row: 1; }
+.day-block:nth-child(5) { grid-column: 2; grid-row: 2; }
+
+/* Суббота */
+.day-block:nth-child(6) { 
+    grid-column: 3; 
+    grid-row: 2;
+}
+
+/* Воскресенье - ПО СЕРЕДИНЕ */
+.day-block:nth-child(7) { 
+    grid-column: 2 / span 2; 
+    grid-row: 3;
+    justify-self: center;
+    min-width: 200px;
+    margin-top: var(--space-md);
+}
+
+.day-block {
     text-align: center;
+    padding: var(--space-sm);
+    border-radius: 0.5rem;
+    background: #f9f9f9;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.day-block:hover {
+    background: #f0f0f0;
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.15);
+    border-color: var(--accent-gold);
+}
+
+.day-name {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.25rem;
+    color: #000000;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.day-hours {
+    color: #333;
+    font-size: 1.125rem;
+}
+
+.day-hours.closed {
+    color: #ff4444;
+    font-weight: 600;
+}
+
+/* Для выходного дня (воскресенье) - особый стиль */
+.day-block:nth-child(7) { 
+    box-shadow: 0 4px 12px rgba(255, 68, 68, 0.2);
+    border: 1px solid #ffcccc;
+}
+
+.day-block:nth-child(7):hover {
+    box-shadow: 0 6px 16px rgba(255, 68, 68, 0.3);
+    border-color: #ff4444;
+}
+
+/* Карта */
+.map-container {
+    background: var(--white);
+    border-radius: 0.625rem;
+    overflow: hidden;
+    margin-bottom: var(--space-sm);
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    height: 25rem;
+    border: 1px solid #e0e0e0;
+}
+
+#yandex-map {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+
+/* Форма обратной связи - КАК НА ГЛАВНОЙ */
+.callback-form-section {
+    padding: var(--space-sm) 0;
+    margin: var(--space-xs) auto;
+    padding-top: 0 !important;
+    max-width: 43.75rem;
+}
+
+.callback-form-container {
+    background-color: var(--white);
+    padding: var(--space-xl);
+    border-radius: 0.9375rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 0.25rem 0.5rem rgba(0,0,0,0.1);
+    border: 1px solid #e0e0e0;
+}
+
+.callback-form-container:hover {
+    transform: translateY(-0.3125rem);
+    box-shadow: 0 0.5rem 1rem rgba(0,0,0,0.15);
+    border-color: var(--accent-gold);
+}
+
+.form-title {
+    color: #000000;
+}
+
+.form-group {
+    margin-bottom: var(--space-md);
+    position: relative;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 1.125rem var(--space-md);
+    background-color: #f9f9f9;
+    border: 0.125rem solid var(--accent-gold);
     color: #000000;
     font-size: 1.125rem;
-    display: flex;
+    font-family: 'Open Sans', sans-serif;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+}
+
+.form-group input:focus {
+    border-color: #000000;
+    box-shadow: 0 0 0.625rem rgba(212, 175, 55, 0.5);
+    outline: none;
+    transform: scale(1.02);
+    background-color: #ffffff;
+}
+
+.form-group input::placeholder {
+    color: #666;
+    font-size: 1.125rem;
+}
+
+.submit-btn {
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+}
+
+.submit-btn:hover {
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Модальное окно подтверждения */
+.confirmation-modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 2000;
     align-items: center;
     justify-content: center;
 }
 
-.service-name {
-    text-align: left !important;
-    justify-content: flex-start !important;
-    font-weight: 600;
-    color: #333 !important;
+.confirmation-modal.active {
+    display: flex;
 }
 
-.price {
-    font-weight: 700;
-    color: var(--accent-gold) !important;
-    font-size: 1.25rem !important;
-}
-
-.category-badge {
-    display: inline-block;
-    padding: 0.25rem 0.75rem;
-    background: var(--accent-gold);
+.confirmation-content {
+    background-color: var(--white);
     color: #000000;
-    border-radius: 1.25rem;
-    font-size: 0.875rem;
-    font-weight: 600;
-    margin-left: 0.5rem;
+    padding: var(--space-xl);
+    border-radius: 0.9375rem;
+    max-width: 35rem;
+    text-align: center;
+    position: relative;
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.3);
+    border: 2px solid var(--accent-gold);
 }
 
-/* Адаптивность для uslugi.css */
+.confirmation-icon {
+    font-size: 3rem;
+    color: var(--accent-gold);
+    margin-bottom: var(--space-md);
+}
+
+.confirmation-title {
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.75rem;
+    margin-bottom: var(--space-sm);
+    color: var(--primary-dark);
+}
+
+.confirmation-text {
+    font-size: 1.125rem;
+    line-height: 1.6;
+    margin-bottom: var(--space-lg);
+    color: #333;
+}
+
+.confirmation-button {
+    background-color: var(--accent-gold);
+    color: #000000;
+    border: none;
+    padding: 0.875rem 2rem;
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.125rem;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 0.5rem;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(212, 175, 55, 0.3);
+}
+
+.confirmation-button:hover {
+    background-color: #000000;
+    color: var(--accent-gold);
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Адаптивность для contact.css */
 @media (max-width: 48rem) {
-    .services-hero {
+    .contacts-hero { 
         height: 15rem;
+        margin: var(--space-md) auto;
+        max-width: calc(100% - 2rem);
+        width: calc(100% - 2rem);
+        padding: 0;
     }
     
-    .categories-grid {
+    .contacts-hero-title { 
+        font-size: 2.5rem; 
+        padding: 0 var(--space-sm);
+    }
+    
+    .contacts-hero-subtitle { 
+        font-size: 1.25rem; 
+        padding: 0 var(--space-sm);
+    }
+    
+    .contacts-section {
+        padding: var(--space-sm) 0;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
+    }
+    
+    .contacts-title,
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: var(--space-md);
+        padding: 0 var(--space-sm);
+    }
+    
+    .contacts-container {
+        padding: var(--space-md);
+        margin: 0 var(--space-sm) var(--space-sm);
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+        border-radius: 0.9375rem;
+        overflow: hidden;
+    }
+    
+    .contacts-grid {
         grid-template-columns: 1fr;
         gap: var(--space-md);
+        margin-bottom: var(--space-lg);
+        padding: 0;
     }
     
-    .category-card {
-        padding: var(--space-lg);
+    .contact-card {
+        padding: var(--space-md);
+        margin: 0;
+        width: 100%;
+        border-radius: 0.625rem;
     }
     
-    /* УЛУЧШЕННАЯ АДАПТАЦИЯ ТАБЛИЦ ДЛЯ МОБИЛЬНЫХ */
-    .pricing-table {
-        display: block;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
+    .hours-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-sm);
+        padding: var(--space-md);
+        margin-bottom: var(--space-lg);
+        width: 100%;
+        max-width: 100%;
+        overflow: hidden;
     }
     
-    .table-header {
-        display: none;
+    .day-block:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .day-block:nth-child(2) { grid-column: 2; grid-row: 1; }
+    .day-block:nth-child(3) { grid-column: 1; grid-row: 2; }
+    .day-block:nth-child(4) { grid-column: 2; grid-row: 2; }
+    .day-block:nth-child(5) { grid-column: 1; grid-row: 3; }
+    .day-block:nth-child(6) { grid-column: 2; grid-row: 3; }
+    
+    .day-block:nth-child(7) { 
+        grid-column: 1 / span 2; 
+        grid-row: 4;
+        justify-self: stretch;
+        width: auto;
+        margin-top: var(--space-sm);
+        min-width: unset;
     }
     
-    .table-row {
-        display: block;
-        margin-bottom: var(--space-md);
-        border: 0.125rem solid var(--accent-gold);
+    .day-block {
+        padding: var(--space-sm);
+        text-align: center;
+        min-height: auto;
+    }
+    
+    .day-name {
+        font-size: 1.1rem;
+    }
+    
+    .day-hours {
+        font-size: 1rem;
+    }
+    
+    .map-container {
+        height: 20rem;
+        margin: 0 0 var(--space-sm) 0;
+        width: 100%;
+        max-width: 100%;
         border-radius: 0.625rem;
         overflow: hidden;
-        background: var(--white);
     }
     
-    .table-row div {
-        display: flex;
-        justify-content: space-between;
-        padding: var(--space-sm);
-        border-bottom: 0.0625rem solid #e0e0e0;
-        text-align: left;
+    .callback-form-section {
+        padding: 0 0 var(--space-sm) 0;
+        margin: 0 auto;
+        max-width: 100%;
+        width: 100%;
     }
     
-    .table-row div:last-child {
-        border-bottom: none;
+    .callback-form-container {
+        padding: var(--space-md);
+        margin: 0 var(--space-sm);
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
+        border-radius: 0.9375rem;
     }
     
-    .table-row div::before {
-        content: attr(data-label);
-        font-weight: 600;
-        color: #333;
-        flex: 1;
+    .form-title {
+        font-size: 2rem;
+        padding: 0 var(--space-xs);
     }
     
-    .table-row div .price {
-        flex: 1;
-        text-align: right;
-        justify-content: flex-end;
+    .form-group input {
+        padding: 1rem var(--space-sm);
+        font-size: 1rem;
     }
     
-    .service-name {
-        background: var(--accent-gold);
-        color: #000000 !important;
-        font-weight: 700;
-        font-size: 1.125rem;
-        padding: var(--space-sm);
-        border-bottom: 0.125rem solid var(--accent-gold);
-    }
-    
-    .service-name::before {
-        content: "Услуга: ";
-        font-weight: 700;
-    }
-    
-    .services-hero,
-    .services-categories,
-    .pricing-tables {
+    .menu-divider,
+    .footer-divider-top {
         margin-left: var(--space-sm);
         margin-right: var(--space-sm);
-        max-width: calc(100% - 1.875rem);
+        width: calc(100% - 2rem);
+        max-width: calc(100% - 2rem);
     }
 }
 
 @media (max-width: 30rem) {
-    .services-hero {
+    .contacts-hero { 
         height: 12rem;
+        margin: var(--space-sm) auto;
+        max-width: calc(100% - 1rem);
+        width: calc(100% - 1rem);
+    }
+    
+    .contacts-hero-title { 
+        font-size: 1.75rem; 
+    }
+    
+    .contacts-hero-subtitle { 
+        font-size: 0.875rem; 
+    }
+    
+    .contacts-container {
+        padding: var(--space-sm);
+        margin: 0 var(--space-xs) var(--space-sm);
+        width: calc(100% - 1rem);
+        max-width: calc(100% - 1rem);
+    }
+    
+    .contacts-title,
+    .section-title {
+        font-size: 1.75rem;
+    }
+    
+    .contact-card {
+        padding: var(--space-sm);
+    }
+    
+    .contact-icon {
+        font-size: 2rem;
+        margin-bottom: var(--space-sm);
+    }
+    
+    .contact-title {
+        font-size: 1.25rem;
+    }
+    
+    .contact-info {
+        font-size: 1rem;
+    }
+    
+    .hours-grid {
+        grid-template-columns: 1fr;
+        padding: var(--space-sm);
+    }
+    
+    .day-block:nth-child(1) { grid-column: 1; grid-row: 1; }
+    .day-block:nth-child(2) { grid-column: 1; grid-row: 2; }
+    .day-block:nth-child(3) { grid-column: 1; grid-row: 3; }
+    .day-block:nth-child(4) { grid-column: 1; grid-row: 4; }
+    .day-block:nth-child(5) { grid-column: 1; grid-row: 5; }
+    .day-block:nth-child(6) { grid-column: 1; grid-row: 6; }
+    
+    .day-block:nth-child(7) { 
+        grid-column: 1; 
+        grid-row: 7;
+        margin-top: var(--space-xs);
+    }
+    
+    .day-block {
+        padding: var(--space-xs) var(--space-sm);
+    }
+    
+    .map-container {
+        height: 15rem;
+    }
+    
+    .callback-form-container {
+        padding: var(--space-sm);
+        margin: 0 var(--space-xs);
+        width: calc(100% - 1rem);
+        max-width: calc(100% - 1rem);
+    }
+    
+    .form-title {
+        font-size: 1.75rem;
+    }
+    
+    .submit-btn {
+        padding: 0.875rem;
+        font-size: 1.125rem;
+    }
+    
+    .mobile-logo .logo-placeholder { 
+        width: 6.5rem; 
+        height: 2.5rem; 
+    }
+    
+    .mobile-menu {
+        width: 85%;
+        padding: 3rem var(--space-sm) var(--space-md);
+    }
+    
+    .mobile-menu-items a {
+        font-size: 1.125rem;
+    }
+    
+    .social-icon {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.125rem;
+    }
+    
+    .back-to-top {
+        width: 2.5rem;
+        height: 2.5rem;
+        font-size: 1.5rem;
+    }
+    
+    .footer-row a {
+        font-size: 1rem;
+    }
+    
+    .footer-bottom {
+        font-size: 1.125rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .contacts-hero-title { 
+        font-size: 1.5rem; 
+    }
+    
+    .contacts-hero-subtitle { 
+        font-size: 0.75rem; 
+    }
+    
+    .contacts-title,
+    .section-title,
+    .form-title {
+        font-size: 1.5rem;
+    }
+    
+    .day-name {
+        font-size: 1rem;
+    }
+    
+    .day-hours {
+        font-size: 0.875rem;
+    }
+    
+    .mobile-logo .logo-placeholder { 
+        width: 5.5rem; 
+        height: 2rem; 
+    }
+    
+    .burger-line {
+        width: 1.25rem;
+    }
+}
+
+@media (max-height: 480px) and (orientation: landscape) {
+    .contacts-hero {
+        height: 10rem;
+    }
+    
+    .contacts-hero-title {
+        font-size: 2rem;
+    }
+    
+    .contacts-hero-subtitle {
+        font-size: 1rem;
+    }
+    
+    .map-container {
+        height: 12rem;
+    }
+    
+    .mobile-menu {
+        width: 60%;
+        padding-top: 3rem;
     }
 }
