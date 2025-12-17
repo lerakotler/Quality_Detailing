@@ -659,6 +659,7 @@ footer {
     .page-hero {
         height: 12rem;
     }
+}
 
 /* Категории услуг */
 .services-categories {
@@ -965,3 +966,4 @@ footer {
         max-width: calc(100% - 1.875rem);
     }
 }
+
