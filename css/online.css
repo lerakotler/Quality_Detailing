@@ -1,0 +1,934 @@
+:root {
+    font-size: 16px;
+
+    --primary-dark: #2a2a2a;
+    --accent-gold: #D4AF37;
+    --white: #FFFFFF;
+    --light-bg: #fbfbfb;
+    --medium-gray: #444;
+
+    --space-xs: 0.5rem;
+    --space-sm: 1rem;
+    --space-md: 1.5rem;
+    --space-lg: 2rem;
+    --space-xl: 2.5rem;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--primary-dark);
+    color: var(--white);
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.4;
+    font-size: 1.375rem;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 81.25rem;
+    margin: 0 auto;
+    padding: 0 var(--space-md);
+    width: 100%;
+}
+
+/* Шапка */
+.header { 
+    background-color: var(--primary-dark); 
+    padding: var(--space-sm) 0; 
+}
+.header-content { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center;
+    position: relative;
+}
+
+.logo-placeholder { 
+    width: 13.75rem; 
+    height: 5rem; 
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    border-radius: 2rem; 
+    overflow: hidden; 
+    background-color: var(--primary-dark); 
+}
+.logo-placeholder img { 
+    width: 100%; 
+    height: 100%; 
+    object-fit: contain; 
+}
+
+/* Мобильная шапка */
+.mobile-header { 
+    display: none; 
+    background-color: var(--primary-dark); 
+    padding: var(--space-xs) 0; 
+}
+.mobile-top-bar { 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%; 
+}
+.mobile-left { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--space-md); 
+    flex: 1; 
+}
+.mobile-logo { 
+    flex: 1; 
+    display: flex; 
+    justify-content: flex-start; 
+}
+.mobile-logo .logo-placeholder { 
+    width: 10rem; 
+    height: 3.75rem; 
+}
+.mobile-actions { 
+    display: flex; 
+    align-items: center; 
+    gap: var(--space-md); 
+}
+.burger-menu { 
+    display: none; 
+    flex-direction: column; 
+    cursor: pointer; 
+    gap: 0.25rem; 
+}
+.burger-line { 
+    width: 1.5625rem; 
+    height: 0.1875rem; 
+    background-color: var(--accent-gold);
+    transition: all 0.3s ease;
+}
+
+.mobile-callback { 
+    color: var(--accent-gold); 
+    font-size: 1.5rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.mobile-callback:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+/* Меню */
+.top-menu { 
+    background-color: var(--primary-dark); 
+    padding: var(--space-xs) 0; 
+}
+
+.menu-container { 
+    display: flex; 
+    justify-content: center; 
+    align-items: center; 
+    max-width: 68.75rem; 
+    margin: 0 auto;
+    position: relative;
+}
+
+.callback-icon { 
+    color: var(--accent-gold); 
+    font-size: 1.75rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: absolute;
+    right: 0;
+}
+
+.callback-icon:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.menu-items { 
+    display: flex; 
+    gap: 2.1875rem; 
+    list-style: none;
+    margin: 0 auto;
+}
+
+.menu-items a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-size: 1.25rem; 
+    font-weight: 600; 
+    transition: all 0.3s ease; 
+    transform-origin: center; 
+    position: relative; 
+}
+
+.menu-items a:hover {
+    color: var(--accent-gold);
+    transform: scale(1.1);
+}
+
+/* ПОДЧЕРКИВАНИЕ АКТИВНОЙ СТРАНИЦЫ */
+.menu-items a.active {
+    color: var(--accent-gold);
+}
+
+.menu-items a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -0.2rem;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--accent-gold);
+}
+
+/* Мобильное меню */
+.mobile-menu-overlay { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 999; 
+}
+.mobile-menu-overlay.active { 
+    display: block; 
+}
+.mobile-menu { 
+    display: none; 
+    position: fixed; 
+    top: 0; 
+    right: 0; 
+    width: 70%; 
+    height: 100%; 
+    background-color: var(--primary-dark); 
+    z-index: 1000; 
+    flex-direction: column; 
+    padding: 5rem var(--space-md) var(--space-md); 
+    transform: translateX(100%);
+    transition: transform 0.3s ease;
+    box-shadow: -0.3125rem 0 0.9375rem rgba(0, 0, 0, 0.3);
+}
+
+.mobile-menu.active { 
+    display: flex; 
+    transform: translateX(0); 
+}
+
+.mobile-menu-items { 
+    list-style: none; 
+    display: flex; 
+    flex-direction: column; 
+    gap: 1.5625rem; 
+}
+
+.mobile-menu-items a { 
+    color: var(--white); 
+    text-decoration: none; 
+    font-size: 1.5rem; 
+    font-weight: 600; 
+    padding: var(--space-sm) 0; 
+    border-bottom: 0.0625rem solid var(--medium-gray); 
+    display: block; 
+    transition: all 0.3s ease; 
+}
+
+.mobile-menu-items a:hover {
+    color: var(--accent-gold);
+    transform: translateX(0.625rem);
+}
+
+/* ПОДЧЕРКИВАНИЕ АКТИВНОЙ СТРАНИЦЫ В МОБИЛЬНОМ МЕНЮ */
+.mobile-menu-items a.active {
+    color: var(--accent-gold);
+}
+
+.mobile-menu-items a.active::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 0.125rem;
+    background-color: var(--accent-gold);
+}
+
+.close-menu { 
+    position: absolute; 
+    top: var(--space-md); 
+    right: var(--space-md); 
+    color: var(--accent-gold); 
+    font-size: 1.875rem; 
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.close-menu:hover {
+    color: var(--white);
+    transform: scale(1.1);
+}
+
+.menu-divider { 
+    height: 0.125rem; 
+    background: linear-gradient(90deg, transparent 0%, var(--accent-gold) 20%, var(--accent-gold) 80%, transparent 100%); 
+    margin: 0.5rem auto var(--space-md); 
+    max-width: 68.75rem; 
+}
+    /* Герой баннер */
+    .booking-hero {
+        background-color: var(--medium-gray);
+        border-radius: 0.9375rem;
+        margin: var(--space-lg) auto;
+        max-width: 75rem;
+        height: 18.75rem;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        overflow: hidden;
+        background: 
+            linear-gradient(135deg, rgba(42, 42, 42, 0.9) 0%, rgba(42, 42, 42, 0.7) 100%),
+            repeating-linear-gradient(45deg, transparent, transparent 0.625rem, rgba(212, 175, 55, 0.05) 0.625rem, rgba(212, 175, 55, 0.05) 1.25rem),
+            linear-gradient(135deg, var(--primary-dark) 0%, #3a3a3a 100%);
+    }
+
+    .booking-hero-content {
+        text-align: center;
+        z-index: 2;
+    }
+
+    .booking-hero-title {
+        font-family: 'Abhaya Libre', serif;
+        font-size: 3.5rem;
+        color: var(--white);
+        font-weight: 800;
+        text-shadow: 0.125rem 0.125rem 0.25rem rgba(0, 0, 0, 0.5);
+        margin-bottom: var(--space-sm);
+        transition: all 0.3s ease;
+    }
+
+    .booking-hero-title:hover {
+        transform: scale(1.02);
+        color: var(--accent-gold);
+    }
+
+    .booking-hero-subtitle {
+        font-size: 1.5rem;
+        color: var(--accent-gold);
+        font-weight: 600;
+        transition: all 0.3s ease;
+    }
+
+    .booking-hero-subtitle:hover {
+        transform: scale(1.05);
+        color: var(--white);
+    }
+
+    /* Форма записи */
+    .booking-form-section {
+        padding-top: var(--space-md);    
+        padding-bottom: var(--space-xs); 
+        padding-left: 0;
+        padding-right: 0;
+        margin: var(--space-sm) auto;
+        max-width: 75rem;
+    }
+
+    .section-title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 2.375rem;
+        margin-bottom: 1.5rem; 
+        text-align: center;
+        color: var(--white);
+        transition: all 0.3s ease;
+    }
+
+    .section-title:hover {
+        transform: scale(1.02);
+    }
+
+    .booking-container {
+        background: var(--light-bg);
+        padding: var(--space-lg);
+        border-radius: 0.9375rem;
+        margin-bottom: var(--space-sm); 
+    }
+
+    .form-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: var(--space-md);
+    }
+
+    .form-column {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .form-group {
+        margin-bottom: var(--space-sm); 
+    }
+
+    .form-group label {
+        display: block;
+        margin-bottom: var(--space-xs);
+        color: #000000;
+        font-weight: 600;
+        font-size: 1.125rem;
+    }
+
+    .form-group.required label::after {
+        content: " *";
+        color: #ff4444;
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+        width: 100%;
+        padding: 1rem var(--space-md);
+        background-color: var(--white);
+        border: 0.125rem solid var(--accent-gold);
+        color: #000000;
+        font-size: 1.125rem;
+        font-family: 'Open Sans', sans-serif;
+        border-radius: 0.5rem;
+    }
+
+    .form-group textarea {
+        height: 7.5rem;
+        resize: vertical;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+        border-color: #000000;
+        box-shadow: 0 0 0.625rem rgba(212, 175, 55, 0.5);
+        outline: none;
+    }
+
+    .form-group input.error,
+    .form-group select.error {
+        border-color: #ff4444;
+    }
+
+    .error-message {
+        color: #ff4444;
+        font-size: 0.875rem;
+        margin-top: 0.25rem;
+        display: none;
+    }
+
+    /* Стили для услуг */
+    .services-selection {
+        margin-bottom: var(--space-md); 
+    }
+
+    .service-category {
+        margin-bottom: var(--space-sm); 
+        border: 1px solid #e0e0e0;
+        border-radius: 0.5rem;
+        padding: var(--space-md);
+        background: var(--white);
+    }
+
+    .category-title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.5rem;
+        color: #000000;
+        margin-bottom: var(--space-sm);
+        font-weight: 700;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .add-category-btn {
+        background: var(--accent-gold);
+        color: #000000;
+        border: none;
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem;
+        cursor: pointer;
+        font-size: 0.875rem;
+        font-weight: bold;
+    }
+
+    .service-checkbox {
+        display: flex;
+        align-items: center;
+        margin-bottom: 0.5rem; 
+        padding: 0.5rem;
+        border-radius: 0.5rem;
+    }
+
+    .service-checkbox input {
+        margin-right: 0.75rem;
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .service-checkbox label {
+        color: #000000;
+        font-weight: normal;
+        cursor: pointer;
+        flex: 1;
+    }
+
+    .service-price {
+        color: var(--accent-gold);
+        font-weight: bold;
+        margin-left: 0.5rem;
+    }
+
+    .selected-services {
+        margin-top: var(--space-md); 
+        background: var(--white);
+        border-radius: 0.5rem;
+        padding: var(--space-md);
+    }
+
+    .selected-services-title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.5rem;
+        color: #000000;
+        margin-bottom: var(--space-sm);
+        font-weight: 700;
+    }
+
+    .selected-service-item {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0.5rem; 
+        border-bottom: 1px solid #e0e0e0;
+    }
+
+    .selected-service-item:last-child {
+        border-bottom: none;
+    }
+
+    .selected-service-name {
+        color: #000000;
+        font-weight: 600;
+    }
+
+    .selected-service-price {
+        color: var(--accent-gold);
+        font-weight: bold;
+    }
+
+    .remove-service {
+        background: #ff4444;
+        color: white;
+        border: none;
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 0.875rem;
+    }
+
+    .total-price {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: var(--space-sm);
+        padding-top: var(--space-sm);
+        border-top: 2px solid var(--accent-gold);
+        font-weight: bold;
+        font-size: 1.25rem;
+        color: #000000;
+    }
+
+    .time-note {
+        color: #666;
+        font-style: italic;
+        margin-top: 0.5rem;
+        font-size: 1rem;
+        text-align: center;
+        padding: var(--space-sm);
+        background: #f5f5f5;
+        border-radius: 0.5rem;
+        border-left: 4px solid var(--accent-gold);
+    }
+
+    .services-error {
+        color: #ff4444;
+        font-size: 0.875rem;
+        margin-top: 0.5rem;
+        display: none;
+    }
+
+    /* Политика конфиденциальности */
+    .privacy-policy {
+        margin-top: var(--space-md);
+        display: flex;
+        align-items: flex-start;
+    }
+
+    .privacy-policy input {
+        margin-right: 0.75rem;
+        margin-top: 0.25rem;
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+
+    .privacy-policy label {
+        color: #000000;
+        font-size: 1rem;
+        line-height: 1.4;
+    }
+
+    .privacy-link {
+        color: var(--accent-gold);
+        text-decoration: underline;
+        cursor: pointer;
+    }
+
+    /* Модальные окна */
+    .modal-overlay {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.7);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .modal-overlay.active {
+        display: flex;
+    }
+
+    .modal-content {
+        background-color: var(--white);
+        color: #000000;
+        padding: var(--space-lg);
+        border-radius: 0.9375rem;
+        max-width: 50rem;
+        max-height: 80vh;
+        overflow-y: auto;
+        position: relative;
+    }
+
+    .modal-close {
+        position: absolute;
+        top: 1rem;
+        right: 1rem;
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        color: var(--accent-gold);
+    }
+
+    .modal-title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.75rem;
+        margin-bottom: var(--space-md);
+        color: var(--primary-dark);
+    }
+
+    .confirmation-modal {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 2000;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .confirmation-modal.active {
+        display: flex;
+    }
+
+    .confirmation-content {
+        background-color: var(--white);
+        color: #000000;
+        padding: var(--space-xl);
+        border-radius: 0.9375rem;
+        max-width: 35rem;
+        text-align: center;
+        position: relative;
+    }
+
+    .confirmation-icon {
+        font-size: 3rem;
+        color: var(--accent-gold);
+        margin-bottom: var(--space-md);
+    }
+
+    .confirmation-title {
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.75rem;
+        margin-bottom: var(--space-sm);
+        color: var(--primary-dark);
+    }
+
+    .confirmation-text {
+        font-size: 1.125rem;
+        line-height: 1.6;
+        margin-bottom: var(--space-lg);
+        color: #333;
+    }
+
+    .confirmation-button {
+        background-color: var(--accent-gold);
+        color: #000000;
+        border: none;
+        padding: 0.875rem 2rem;
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.125rem;
+        cursor: pointer;
+        font-weight: bold;
+        border-radius: 0.5rem;
+    }
+
+    .submit-btn {
+        background-color: var(--accent-gold);
+        color: #000000;
+        border: none;
+        padding: 1rem 2.5rem; 
+        font-family: 'Roboto Condensed', sans-serif;
+        font-size: 1.25rem;
+        cursor: pointer;
+        width: 100%;
+        font-weight: bold;
+        border-radius: 0.5rem;
+        margin-top: var(--space-md); 
+    }
+
+    .submit-btn:disabled {
+        background-color: #ccc;
+        color: #666;
+        cursor: not-allowed;
+    }
+
+    .success-message {
+        background: #4CAF50;
+        color: white;
+        padding: var(--space-md);
+        border-radius: 0.5rem;
+        text-align: center;
+        margin-top: var(--space-md);
+        display: none;
+    }
+
+    /* УМЕНЬШЕННЫЙ ОТСТУП МЕЖДУ РАЗДЕЛИТЕЛЕМ И ФОРМОЙ */
+    .form-divider {
+        height: 0.125rem;
+        background: linear-gradient(90deg, transparent 0%, var(--accent-gold) 20%, var(--accent-gold) 80%, transparent 100%);
+        margin: var(--space-md) auto var(--space-sm); /* Уменьшен отступ сверху с var(--space-lg) до var(--space-md) */
+        max-width: 68.75rem;
+    }
+
+    /* Подвал */
+    footer {
+        background-color: var(--primary-dark);
+        padding: var(--space-sm) 0 var(--space-xs); /* Уменьшены отступы */
+        color: var(--white);
+        margin-top: var(--space-xs); /* Минимальный отступ сверху */
+    }
+
+    .footer-menu {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+        margin-bottom: var(--space-md);
+    }
+
+    .footer-row {
+        display: flex;
+        justify-content: center;
+        gap: 1.875rem;
+        flex-wrap: wrap;
+    }
+
+    .footer-row a {
+        color: var(--white);
+        text-decoration: none;
+        font-size: 1.125rem;
+        transition: all 0.3s ease;
+    }
+
+    .footer-row a:hover {
+        color: var(--accent-gold);
+        transform: scale(1.1);
+    }
+
+    .social-links {
+        display: flex;
+        justify-content: center;
+        gap: var(--space-md);
+        margin: var(--space-md) 0;
+    }
+
+    .social-icon {
+        width: 2.8125rem;
+        height: 2.8125rem;
+        background-color: var(--accent-gold);
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000000;
+        font-size: 1.25rem;
+        transition: all 0.3s ease;
+    }
+
+    .social-icon:hover {
+        background-color: var(--white);
+        transform: scale(1.1);
+    }
+
+    .footer-divider {
+        height: 0.125rem;
+        background: linear-gradient(90deg, transparent 0%, var(--accent-gold) 20%, var(--accent-gold) 80%, transparent 100%);
+        margin: 0.75rem auto;
+        max-width: 37.5rem;
+    }
+
+    .footer-bottom {
+        text-align: center;
+        font-size: 1.25rem;
+        color: var(--accent-gold);
+        transition: all 0.3s ease;
+    }
+
+    .footer-bottom:hover {
+        transform: scale(1.05);
+    }
+
+    /* Стрелка наверх */
+    .back-to-top {
+        position: fixed;
+        bottom: 2rem;
+        right: 2rem;
+        background-color: var(--accent-gold);
+        border: none;
+        color: #000000;
+        font-size: 2rem;
+        cursor: pointer;
+        font-weight: bold;
+        width: 3.75rem;
+        height: 3.75rem;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: all 0.3s ease;
+        z-index: 1000;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(1.25rem);
+        box-shadow: 0 0.25rem 0.9375rem rgba(212, 175, 55, 0.3);
+    }
+
+    .back-to-top.show {
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+    }
+
+    .back-to-top:hover {
+        background-color: var(--white);
+        transform: scale(1.1);
+        box-shadow: 0 0.375rem 1.25rem rgba(212, 175, 55, 0.5);
+    }
+
+    /* Адаптивность */
+    @media (max-width: 48rem) {
+        :root { font-size: 14px; }
+        
+        .top-menu { display: none; }
+        .header { display: none; }
+        .mobile-header { display: block; }
+        .burger-menu { display: flex; }
+        
+        .booking-hero { height: 15rem; }
+        .booking-hero-title { font-size: 2.5rem; }
+        .booking-hero-subtitle { font-size: 1.25rem; }
+        
+        .form-grid { grid-template-columns: 1fr; gap: var(--space-md); }
+        
+        .footer-row { flex-direction: column; align-items: center; gap: var(--space-sm); }
+        
+        .container { padding: 0 var(--space-sm); }
+        .booking-hero, .booking-form-section {
+            margin-left: var(--space-sm);
+            margin-right: var(--space-sm);
+            max-width: calc(100% - 1.875rem);
+        }
+        
+        .mobile-logo .logo-placeholder { width: 8.75rem; height: 3.125rem; }
+        
+        .modal-content, .confirmation-content {
+            margin: 0 var(--space-sm);
+            padding: var(--space-lg) var(--space-md);
+        }
+
+        /* Мобильные отступы формы */
+        .booking-form-section {
+            padding: var(--space-sm) 0;
+            margin: var(--space-xs) auto;
+        }
+        
+        .section-title {
+            margin-bottom: 1rem;
+            font-size: 2rem; /* Уменьшен размер для мобильных */
+        }
+        
+        .booking-container {
+            padding: var(--space-md);
+            margin-bottom: var(--space-xs);
+        }
+
+        /* Еще меньше отступы на мобильных */
+        .form-divider {
+            margin: var(--space-sm) auto var(--space-xs);
+        }
+        
+        /* Стрелка наверх для мобильных */
+        .back-to-top {
+            bottom: 1rem;
+            right: 1rem;
+            width: 3.125rem;
+            height: 3.125rem;
+            font-size: 1.875rem;
+        }
+
+        footer {
+            padding: var(--space-xs) 0 var(--space-xs);
+            margin-top: 0; /* Убираем отступ на мобильных */
+        }
+    }
+
+    @media (max-width: 30rem) {
+        :root { font-size: 12px; }
+        .booking-hero { height: 12rem; }
+        .booking-hero-title { font-size: 2rem; }
+        .booking-hero-subtitle { font-size: 1rem; }
+        .mobile-search input { width: 7.5rem; }
+        .mobile-logo .logo-placeholder { width: 7.5rem; height: 2.8125rem; }
+        .mobile-menu { width: 85%; }
+        .section-title { font-size: 1.75rem; }
+    }
