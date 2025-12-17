@@ -1199,6 +1199,18 @@ footer {
     .burger-line {
         width: 1.25rem;
     }
+
+        .mobile-menu {
+        width: 85%;
+    }
+    
+    .menu-items {
+        gap: 1.5rem;
+    }
+    
+    .menu-items a {
+        font-size: 1.125rem;
+    }
 }
 
 /* ФИКС ДЛЯ ГОРИЗОНТАЛЬНОЙ ОРИЕНТАЦИИ НА МОБИЛЬНЫХ */
@@ -1223,4 +1235,5 @@ footer {
         width: 60%;
         padding-top: 3rem;
     }
+
 }
