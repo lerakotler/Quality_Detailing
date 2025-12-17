@@ -659,6 +659,7 @@ footer {
     .page-hero {
         height: 12rem;
     }
+}
 
 /* Категории портфолио */
 .portfolio-categories {
@@ -953,3 +954,4 @@ footer {
         grid-template-columns: 1fr;
     }
 }
+
