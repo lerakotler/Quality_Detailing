@@ -167,7 +167,7 @@ body {
 .menu-items a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.25rem;
+    font-size: 1.125rem; /* Уменьшено с 1.25rem */
     font-weight: 600;
     transition: all 0.3s ease;
     transform-origin: center;
@@ -234,15 +234,15 @@ body {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 1.5625rem;
+    gap: 1.25rem; /* Уменьшено с 1.5625rem */
 }
 
 .mobile-menu-items a {
     color: var(--white);
     text-decoration: none;
-    font-size: 1.5rem;
+    font-size: 1.375rem; /* Уменьшено с 1.5rem */
     font-weight: 600;
-    padding: var(--space-sm) 0;
+    padding: 0.875rem 0; /* Уменьшено с var(--space-sm) */
     border-bottom: 0.0625rem solid var(--medium-gray);
     display: block;
     transition: all 0.3s ease;
@@ -544,10 +544,10 @@ footer {
     box-shadow: 0 0.375rem 1.25rem rgba(212, 175, 55, 0.5);
 }
 
-/* ОБЩИЕ АДАПТИВНЫЕ СТИЛИ - ИСПРАВЛЕННЫЕ РАЗМЕРЫ */
+/* ФИКСИРОВАННЫЕ АДАПТИВНЫЕ СТИЛИ */
 @media (max-width: 48rem) {
     :root {
-        font-size: 16px;
+        font-size: 14px; /* Уменьшаем базовый размер шрифта */
     }
     
     .top-menu {
@@ -578,65 +578,186 @@ footer {
     
     /* БОЛЬШИЕ РАЗМЕРЫ ШРИФТОВ ДЛЯ БАННЕРОВ НА МОБИЛЬНЫХ */
     .page-hero-title {
-        font-size: 2.75rem;
+        font-size: 2.5rem; /* Уменьшено с 2.75rem */
         line-height: 1.2;
+        padding: 0 0.5rem;
     }
     
     .page-hero-subtitle {
-        font-size: 1.375rem;
+        font-size: 1.25rem; /* Уменьшено с 1.375rem */
         line-height: 1.3;
+        padding: 0 0.5rem;
     }
     
-    /* УВЕЛИЧЕННАЯ МОБИЛЬНАЯ ШАПКА - АДАПТИВНАЯ ВЕРСИЯ */
+    /* Уменьшаем заголовки секций в адаптивном режиме */
+    .section-title,
+    .form-title,
+    .contacts-title {
+        font-size: 2rem !important; /* Уменьшено с 2.375rem */
+        line-height: 1.2 !important;
+        word-wrap: break-word;
+        padding: 0 0.5rem;
+        margin-bottom: 1.25rem !important;
+    }
+    
+    /* Уменьшаем навигацию на мобильных */
+    .mobile-menu-items a {
+        font-size: 1.25rem; /* Уменьшено с 1.5rem */
+        padding: 0.75rem 0; /* Уменьшено padding */
+    }
+    
+    /* Уменьшаем кнопку на главной */
+    .booking-btn-banner {
+        font-size: 1.125rem; /* Уменьшено с 1.375rem */
+        padding: 0.875rem var(--space-lg); /* Уменьшено padding */
+        margin-top: var(--space-md);
+    }
+    
+    .booking-button {
+        font-size: 1.125rem; /* Уменьшено с 1.25rem */
+        padding: 0.875rem var(--space-lg);
+    }
+    
+    /* Уменьшаем мобильную шапку */
     .mobile-logo .logo-placeholder {
-        width: 11rem;
-        height: 4rem;
+        width: 10rem; /* Уменьшено с 11rem */
+        height: 3.5rem; /* Уменьшено с 4rem */
     }
     
     .mobile-callback {
-        font-size: 1.75rem;
+        font-size: 1.5rem; /* Уменьшено с 1.75rem */
     }
     
     .burger-line {
-        width: 2rem;
-        height: 0.25rem;
+        width: 1.75rem; /* Уменьшено с 2rem */
+        height: 0.2rem; /* Уменьшено с 0.25rem */
     }
     
     .mobile-actions {
-        gap: 1.25rem;
+        gap: 1rem; /* Уменьшено с 1.25rem */
     }
     
     /* Общие стили для адаптивности баннеров */
     .page-hero {
-        height: 15rem;
-        margin: var(--space-md) auto;
-        max-width: calc(100% - 2rem);
-        width: calc(100% - 2rem);
+        height: 14rem; /* Уменьшено с 15rem */
+        margin: var(--space-sm) auto;
+        max-width: calc(100% - 1rem);
+        width: calc(100% - 1rem);
+        border-radius: 0.75rem;
+    }
+    
+    .page-hero-content {
+        padding: 0 0.5rem;
     }
     
     /* Стрелка наверх для мобильных */
     .back-to-top {
         bottom: 1rem;
         right: 1rem;
-        width: 3.125rem;
-        height: 3.125rem;
-        font-size: 1.875rem;
+        width: 2.5rem; /* Уменьшено с 3.125rem */
+        height: 2.5rem; /* Уменьшено с 3.125rem */
+        font-size: 1.5rem; /* Уменьшено с 1.875rem */
+    }
+    
+    /* Общие фиксы для всех контейнеров */
+    .contacts-container,
+    .about-container,
+    .blog-container,
+    .callback-form-container,
+    .hours-grid {
+        padding: var(--space-md) !important;
+        margin: 0 var(--space-xs) var(--space-md) !important;
+        width: calc(100% - 1rem) !important;
+        max-width: calc(100% - 1rem) !important;
+        border-radius: 0.75rem !important;
+        box-sizing: border-box;
+    }
+    
+    /* Предотвращаем горизонтальный скролл */
+    body {
+        overflow-x: hidden;
+        max-width: 100vw;
+        width: 100%;
+    }
+    
+    * {
+        max-width: 100%;
     }
 }
 
 @media (max-width: 30rem) {
+    :root {
+        font-size: 13px;
+    }
+    
     .page-hero-title {
-        font-size: 2.25rem;
+        font-size: 2rem; /* Уменьшено с 2.25rem */
     }
     
     .page-hero-subtitle {
-        font-size: 1.125rem;
+        font-size: 1rem; /* Уменьшено с 1.125rem */
     }
     
-    .section-title {
-        font-size: 1.75rem;
+    .section-title,
+    .form-title,
+    .contacts-title {
+        font-size: 1.75rem !important; /* Уменьшено с 2rem */
+        padding: 0 0.25rem;
+    }
+    
+    /* Уменьшаем мобильную шапку для маленьких экранов */
+    .mobile-logo .logo-placeholder {
+        width: 8rem; /* Уменьшено с 10rem */
+        height: 3rem; /* Уменьшено с 3.5rem */
+    }
+    
+    .mobile-callback {
+        font-size: 1.25rem; /* Уменьшено с 1.5rem */
+    }
+    
+    .burger-line {
+        width: 1.5rem; /* Уменьшено с 1.75rem */
+        height: 0.18rem; /* Уменьшено с 0.22rem */
+    }
+    
+    .mobile-menu {
+        width: 85%;
+    }
+    
+    .page-hero {
+        height: 11rem; /* Уменьшено с 12rem */
+        margin: 0.75rem auto;
+    }
+    
+    /* Уменьшаем еще больше все контейнеры */
+    .contacts-container,
+    .about-container,
+    .blog-container,
+    .callback-form-container,
+    .hours-grid {
+        padding: var(--space-sm) !important;
+        margin: 0 0.5rem var(--space-sm) !important;
+        width: calc(100% - 1rem) !important;
+        border-radius: 0.625rem !important;
+    }
+    
+    /* Уменьшаем навигацию еще больше */
+    .mobile-menu-items a {
+        font-size: 1.125rem; /* Уменьшено с 1.25rem */
+        padding: 0.625rem 0; /* Уменьшено padding */
+    }
+    
+    .booking-btn-banner {
+        font-size: 1rem; /* Уменьшено с 1.125rem */
+        padding: 0.75rem var(--space-md); /* Уменьшено padding */
+    }
+    
+    .booking-button {
+        font-size: 1rem; /* Уменьшено с 1.125rem */
+        padding: 0.75rem var(--space-md);
     }
 }
+
 /* Секция "О нас" */
 .about-section {
     padding: 0.75rem 0;
@@ -942,3 +1063,4 @@ footer {
         min-height: 15rem;
     }
 }
+
