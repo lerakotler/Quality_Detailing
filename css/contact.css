@@ -1132,11 +1132,11 @@ footer {
     }
     
     .contacts-hero-title { 
-        font-size: 1.75rem; 
+        font-size: 2rem; 
     }
     
     .contacts-hero-subtitle { 
-        font-size: 0.875rem; 
+        font-size: 1rem; 
     }
     
     /* КОНТЕЙНЕР КОНТАКТОВ */
@@ -1148,8 +1148,9 @@ footer {
     }
     
     .contacts-title,
-    .section-title {
-        font-size: 1.75rem;
+    .section-title 
+    .form-title {
+        font-size: 2rem;
     }
     
     /* КАРТОЧКИ КОНТАКТОВ */
@@ -1250,17 +1251,17 @@ footer {
 /* ДОПОЛНИТЕЛЬНЫЕ ФИКСЫ ДЛЯ ОЧЕНЬ УЗКИХ ЭКРАНОВ */
 @media (max-width: 360px) {
     .contacts-hero-title { 
-        font-size: 1.5rem; 
+        font-size: 1.75rem; 
     }
     
     .contacts-hero-subtitle { 
-        font-size: 0.75rem; 
+        font-size: 0.9375rem; 
     }
     
     .contacts-title,
     .section-title,
     .form-title {
-        font-size: 1.5rem;
+        font-size: 1.75rem;
     }
     
     .day-name {
@@ -1317,5 +1318,6 @@ footer {
     }
 
 }
+
 
 
