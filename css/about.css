@@ -737,6 +737,12 @@ footer {
     .about-hero { height: 15rem; }
     .about-hero-title { font-size: 2.5rem; }
     .about-hero-subtitle { font-size: 1.25rem; }
+
+        .callback-form-section {
+        margin-left: var(--space-sm);
+        margin-right: var(--space-sm);
+        max-width: calc(100% - 1.875rem);
+    }
     
     .company-info {
         grid-template-columns: 1fr;
@@ -783,4 +789,5 @@ footer {
     .mobile-logo .logo-placeholder { width: 7.5rem; height: 2.8125rem; }
     .mobile-menu { width: 85%; }
     .company-image { min-height: 15rem; }
+
 }
